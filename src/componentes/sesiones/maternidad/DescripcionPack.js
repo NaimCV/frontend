@@ -3,7 +3,7 @@ export default function DescripcionPack ({props}) {
     return (
         <div style={{ textAlign: 'center' }}>
             {textoPacks.map((element) => (
-                <div style={{ marginTop: '100px' }}>
+                <div className='description-align' style={{ marginTop: '30px' }}>
                     <h2>{element.titulo}</h2>
                     <p><strong>{element.contenido}</strong></p>
                     {element.extra ? 

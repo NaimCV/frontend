@@ -71,7 +71,7 @@ a, a:hover, a:visited, a:active {
   display: flex; 
   margin-left: auto; 
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 10px;
   border-radius: 9999px;
 }
 
@@ -181,6 +181,11 @@ body {
 
 .description-align {
   text-align: center;
+  width: 90%; 
+  height: auto;
+  display: float; 
+  margin-left: auto; 
+  margin-right: auto;
   margin-top: 50px;
 }
 
@@ -222,4 +227,8 @@ section img:hover {
   font-size: 20px;
   padding: 20px;
   text-align: center;
+}
+
+.text-movil {
+  max-width: 80%;
 }

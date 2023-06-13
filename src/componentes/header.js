@@ -15,7 +15,7 @@ export default function Header() {
                                 <img
                                 alt="logo 1"
                                 style={{ maxWidth: '10%' }}
-                                src='https://oliveda-photography.es/wp-content/uploads/2021/09/cropped-MARCA.png'/>
+                                src='https://oliveda-photography.es/wp-content/uploads/2023/06/logo.png'/>
                             </NavLink>
                         </div>
                         <div style={{ display: 'inline-block' }}><MenuDesktop /></div>
@@ -28,7 +28,7 @@ export default function Header() {
                                 <img
                                 alt="logo 2"
                                 style={{ maxWidth: '40%' }}
-                                src='https://oliveda-photography.es/wp-content/uploads/2021/09/cropped-MARCA.png'/>
+                                src='https://oliveda-photography.es/wp-content/uploads/2023/06/logo.png'/>
                             </NavLink>
                         </div>
                         <div><MenuDesktop /></div>
