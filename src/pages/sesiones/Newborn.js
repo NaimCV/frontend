@@ -5,6 +5,37 @@ import { useMediaQuery } from 'react-responsive'
 import '../../index.css'
 
 export default function Newborn() {
+    const { Panel } = Collapse
+    const dataCollapse = [
+        {'¿Por qué de los 6 a los 15 días de vida?': 'Porque aún mantienen la posición fetal y tienen el sueño más profundo.'},
+        {'¿Cuánto dura una sesión?': 'Este tipo de sesiones son largas, su duración es de 1 h – 3 h aprox., no todos los bebes son iguales, cada uno necesita su tiempo, por eso es esencial que vengáis con paciencia, la espera valdrá la pena. (Para los hermanitos tengo una mesita con cuentos y dibujos para colorear).'},
+        {'¿Sobre la ropita?': 'Yo me encargo de todo, vosotros escogéis los colores de los escenarios y yo pongo todo el atrezo y complementos necesarios. Si tenéis alguna ropita especial, que os hayan regalado o que os haga gracia para esta sesión, solo tenéis que comentármelo para preparar un escenario acorde.'},
+        {'¿Mascotas?': 'Si queréis alguna fotografía con vuestra mascota hay que avisar para preparar el escenario. Es muy importante que el animal pueda estar tranquilo en la sala, si no es el caso, alguien tendrá que salir a fuera con el o ella y esperar a que sea su turno.'},
+        {'¿Paga y señal?': 'Hay que hacer una paga y señal de 50 € para la reserva de la sesión, la misma se devolverá en caso de no poder asistir por motivos justificables o avisando 24 h antes de la sesión. El resto se pagara en EFECTIVO el mismo día de la sesión. La paga y señal hay que realizarla una vez os hayáis puesto en contacto conmigo y hayamos reservado día y hora. Datos para el Bizum paga y señal: 640019860 ¡MUY IMPORTANTE! Concepto nombre del bebe + newborn EJEMPLO: Paula newborn'}
+    ]
+    const textoPacks = [
+        {
+            'titulo': 'PACK ACHUCHABLE por 150€',
+            'contenido': '8 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
+            'linea1': 'Sesión en estudio de 1 h. Siempre voy al ritmo de cada bebe.',
+            'linea2': 'Todo el vestuario del bebe. Dispongo de una gran variedad de atrezzo para que no os tengáis que preocupar por nada. (Si tenéis alguna puesta u objeto que os gustaría traer, tenéis que ',
+            'linea3': 'avisarme con antelación para preparar el escenario adecuado)',
+            'linea4': '1 fondo (personalizado con los colores y posicionadores que más os gusten)',
+            'linea5': '1 fondo familiar con papás y hermanitos',
+            'linea6': 'Precio 150€, autorizándome a publicar 130€.'
+        },
+        {
+            'titulo': 'PACK TERNURA por 220€',
+            'contenido': '15 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
+            'linea1': 'Sesión en estudio de 1 h a 3 h. Siempre voy al ritmo de cada bebe',
+            'linea2': 'Las mismas impresas 15×20 con carpeta personalizada.',
+            'linea3': 'Todo el vestuario del bebe. Dispongo de una gran variedad de atrezo para que no os tengáis que preocupar por nada. (Si tenéis alguna puesta u objeto que os gustaría traer, tenéis que ',
+            'linea4': 'avisarme con antelación para preparar el escenario adecuado)',
+            'linea5': '3 fondos (personalizado con los colores y posicionadores que más os gusten)',
+            'linea6': '1 fondo  familiar con papás y hermanitos.',
+            'linea7': 'Precio 220€, autorizándome a publicar 200€.'
+        }]
+        
     const Mobile = ({ children }) => {
         const isMobile = useMediaQuery({ maxWidth: 767 })
         return isMobile ? children : null
@@ -13,7 +44,7 @@ export default function Newborn() {
     const isNotMobile = useMediaQuery({ minWidth: 768 })
     return isNotMobile ? children : null
     }
-    const Example = () => (
+    const NewbornPage = () => (
         <div>
           <Mobile>
             <h1 style={{ textAlign: 'center' }}>Newborn</h1>
@@ -343,40 +374,10 @@ export default function Newborn() {
           </Default>
         </div>
       )
-    const { Panel } = Collapse
-    const dataCollapse = [
-        {'¿Por qué de los 6 a los 15 días de vida?': 'Porque aún mantienen la posición fetal y tienen el sueño más profundo.'},
-        {'¿Cuánto dura una sesión?': 'Este tipo de sesiones son largas, su duración es de 1 h – 3 h aprox., no todos los bebes son iguales, cada uno necesita su tiempo, por eso es esencial que vengáis con paciencia, la espera valdrá la pena. (Para los hermanitos tengo una mesita con cuentos y dibujos para colorear).'},
-        {'¿Sobre la ropita?': 'Yo me encargo de todo, vosotros escogéis los colores de los escenarios y yo pongo todo el atrezo y complementos necesarios. Si tenéis alguna ropita especial, que os hayan regalado o que os haga gracia para esta sesión, solo tenéis que comentármelo para preparar un escenario acorde.'},
-        {'¿Mascotas?': 'Si queréis alguna fotografía con vuestra mascota hay que avisar para preparar el escenario. Es muy importante que el animal pueda estar tranquilo en la sala, si no es el caso, alguien tendrá que salir a fuera con el o ella y esperar a que sea su turno.'},
-        {'¿Paga y señal?': 'Hay que hacer una paga y señal de 50 € para la reserva de la sesión, la misma se devolverá en caso de no poder asistir por motivos justificables o avisando 24 h antes de la sesión. El resto se pagara en EFECTIVO el mismo día de la sesión. La paga y señal hay que realizarla una vez os hayáis puesto en contacto conmigo y hayamos reservado día y hora. Datos para el Bizum paga y señal: 640019860 ¡MUY IMPORTANTE! Concepto nombre del bebe + newborn EJEMPLO: Paula newborn'}
-    ]
-    const textoPacks = [
-        {
-            'titulo': 'PACK ACHUCHABLE por 150€',
-            'contenido': '8 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
-            'linea1': 'Sesión en estudio de 1 h. Siempre voy al ritmo de cada bebe.',
-            'linea2': 'Todo el vestuario del bebe. Dispongo de una gran variedad de atrezzo para que no os tengáis que preocupar por nada. (Si tenéis alguna puesta u objeto que os gustaría traer, tenéis que ',
-            'linea3': 'avisarme con antelación para preparar el escenario adecuado)',
-            'linea4': '1 fondo (personalizado con los colores y posicionadores que más os gusten)',
-            'linea5': '1 fondo familiar con papás y hermanitos',
-            'linea6': 'Precio 150€, autorizándome a publicar 130€.'
-        },
-        {
-            'titulo': 'PACK TERNURA por 220€',
-            'contenido': '15 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
-            'linea1': 'Sesión en estudio de 1 h a 3 h. Siempre voy al ritmo de cada bebe',
-            'linea2': 'Las mismas impresas 15×20 con carpeta personalizada.',
-            'linea3': 'Todo el vestuario del bebe. Dispongo de una gran variedad de atrezo para que no os tengáis que preocupar por nada. (Si tenéis alguna puesta u objeto que os gustaría traer, tenéis que ',
-            'linea4': 'avisarme con antelación para preparar el escenario adecuado)',
-            'linea5': '3 fondos (personalizado con los colores y posicionadores que más os gusten)',
-            'linea6': '1 fondo  familiar con papás y hermanitos.',
-            'linea7': 'Precio 220€, autorizándome a publicar 200€.'
-        }]
 
     return (
         <body>
-            <Example/>
+            <NewbornPage/>
         </body>
     )
 }
