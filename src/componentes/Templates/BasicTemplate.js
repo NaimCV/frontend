@@ -1,9 +1,15 @@
 import { useMediaQuery } from 'react-responsive'
 import { Collapse } from 'antd'
+import GridTresImagenes from './GridTresImagenes'
 
 import '../../index.css'
 
-export default function CakeSmash () {
+export default function BasicTemplate({data}) {
+    console.log(data)
+    const titulo = data.titulo
+    const imagenPortada = data.imagenes.portada
+    const grid_triple = data.imagenes.grid_triple
+    const textoInicial = data.textos.inicial
     const { Panel } = Collapse
     const dataCollapse = [
         {'¿Cuándo tengo que reservar?': 'Lo ideal es reservar con dos meses de antelación, para asegurar la plaza. Esta sesión se realiza tres semanas antes de la fecha del cumpleaños, para tenerlo todo listo a tiempo.'},
@@ -12,7 +18,7 @@ export default function CakeSmash () {
         {'¿El pastel es de verdad? ¿Y si tienen alguna alergia o intolerancia?': 'El pastel es de verdad, apto para bebes. Es sin lactosa y bajo en azucares. Si vuestro bebe tiene algún tipo de intolerancia o alergia tenéis que traer vosotros el pastel o podemos realizar la sesión con un pastel falso.'},
         {'¿Paga y señal?': 'Hay que hacer una paga y señal de 50 € para la reserva de la sesión, la misma se devolverá en caso de no poder asistir por motivos justificables o avisando 24 h antes de la sesión. El resto se pagara en EFECTIVO el mismo día de la sesión. La paga y señal hay que realizarla una vez os hayáis puesto en contacto conmigo y hayamos reservado día y hora. Datos para el Bizum paga y señal: 640019860 ¡MUY IMPORTANTE! Concepto nombre del bebe + cake smash EJEMPLO: Paula cake smash'}
     ]
-    
+
     const Mobile = ({ children }) => {
         const isMobile = useMediaQuery({ maxWidth: 767 })
         return isMobile ? children : null
@@ -21,29 +27,20 @@ export default function CakeSmash () {
     const isNotMobile = useMediaQuery({ minWidth: 768 })
     return isNotMobile ? children : null
     }
-    const CakeSmashPage = () => (
+
+    const BasicTemplate = () => (
         <div>
             <Mobile>
-            <h1 style={{ textAlign: 'center' }}>Cake Smash</h1>
+            <h1 style={{ textAlign: 'center' }}>{titulo}</h1>
                 <div>
-                    <img alt="cakesmash 1" className='imagen-responsive-center-roudend' src="https://oliveda-photography.es/wp-content/uploads/2023/01/EDEL-38-1-edited-scaled.jpg"/>
+                    <img alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenPortada)[0]}/>
                 </div>
                 <div className='description-align' style={{ marginTop: '10px' }}>
-                    <p>¡Sí!, parece que fue ayer la llegada de tu bebe y ya esta a punto de hacer su primera vuelta al sol Es increíble lo rápido que crecen y los cambios que hacen en el primer año de vida.</p>
-                    <p>Sin duda, esta sesión es la más divertida y dulce que tengo. Es el momento de experimentar y jugar con el pastel.</p>
-                    <p>¡No sabría deciros quienes lo disfrutan más, si los peques o los papis!</p>
+                    {textoInicial.map((texto) => (
+                        <p>{texto}</p>
+                    ))}
                 </div>
-                <div className='row' style={{ marginTop: '10px' }}>
-                    <div className='column-img-trio-left'>
-                        <img alt="cakesmash 2"className='cuadriculas-imagenes' style={{ borderRadius: '9999px' }} src="https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-02-4-edited-scaled.jpg"/>
-                    </div>
-                    <div className='column-img-trio-left'>
-                        <img alt="cakesmash 3" className='cuadriculas-imagenes' style={{ borderRadius: '9999px' }} src="https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-43-edited-scaled.jpg"/>
-                    </div>
-                    <div className='column-img-trio-left'>
-                        <img alt="cakesmash 4" className='cuadriculas-imagenes' style={{ borderRadius: '9999px' }} src="https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-46-edited-scaled.jpg"/>
-                    </div>
-                </div>
+                <GridTresImagenes />
                 <div style={{ marginTop: '30px' }}>
                     <img alt="cakesmash 5" className='imagen-responsive-center-roudend' src="https://oliveda-photography.es/wp-content/uploads/2023/01/ONA-34-scaled.jpg"/>
                 </div>
@@ -179,26 +176,15 @@ export default function CakeSmash () {
                 </div>
             </Mobile>
             <Default>
-                <h1 style={{ textAlign: 'center' }}>Cake Smash</h1>
+                <h1 style={{ textAlign: 'center' }}>{titulo}</h1>
                 <div>
-                    <img alt="cakesmash 1" className='imagen-responsive-center-roudend' src="https://oliveda-photography.es/wp-content/uploads/2023/01/EDEL-38-1-edited-scaled.jpg"/>
+                    <img alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenPortada)[0]}/>
                 </div>
                 <div className='description-align'>
-                    <p>¡Sí!, parece que fue ayer la llegada de tu bebe y ya esta a punto de hacer su primera vuelta al sol Es increíble lo rápido que crecen y los cambios que hacen en el primer año de vida.</p>
-                    <p>Sin duda, esta sesión es la más divertida y dulce que tengo. Es el momento de experimentar y jugar con el pastel.</p>
-                    <p>¡No sabría deciros quienes lo disfrutan más, si los peques o los papis!</p>
+                    <p>Es una pasada la evolución y los cambios que hacen durante el primer año de vida,</p>
+                    <p>es por eso que se realizan este tipo de sesiones, para que no os perdáis detalle de cada etapa y podáis recordar todos sus cambios.</p>
                 </div>
-                <div className='row' style={{ marginTop: '50px' }}>
-                    <div className='column-img-trio-left'>
-                        <img alt="cakesmash 2"className='cuadriculas-imagenes' style={{ borderRadius: '9999px' }} src="https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-02-4-edited-scaled.jpg"/>
-                    </div>
-                    <div className='column-img-trio-left'>
-                        <img alt="cakesmash 3" className='cuadriculas-imagenes' style={{ borderRadius: '9999px' }} src="https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-43-edited-scaled.jpg"/>
-                    </div>
-                    <div className='column-img-trio-left'>
-                        <img alt="cakesmash 4" className='cuadriculas-imagenes' style={{ borderRadius: '9999px' }} src="https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-46-edited-scaled.jpg"/>
-                    </div>
-                </div>
+                <GridTresImagenes grid_triple={grid_triple}/>
                 <div style={{ marginTop: '50px' }}>
                     <img alt="cakesmash 5" className='imagen-responsive-center-roudend' src="https://oliveda-photography.es/wp-content/uploads/2023/01/ONA-34-scaled.jpg"/>
                 </div>
@@ -343,7 +329,7 @@ export default function CakeSmash () {
     )
     return(
         <body>
-            <CakeSmashPage/>
+            <BasicTemplate/>
         </body>
     )
 }
