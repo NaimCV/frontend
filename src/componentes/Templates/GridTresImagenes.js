@@ -1,9 +1,9 @@
-export default function GridTresImagenes({grid_triple}) {
+export default function GridTresImagenes({gridTriple}) {
     return(
         <div className='row' style={{ marginTop: '10px' }}>
-            {Object.keys(grid_triple).map((key) => (
+            {Object.keys(gridTriple).map((key) => (
                 <div className='column-img-trio-left'>
-                    <img alt={key} className="cuadriculas-imagenes" style={{ borderRadius: '9999px' }} src={grid_triple[key]} />
+                    <img alt={key} className="cuadriculas-imagenes" style={{ borderRadius: '9999px' }} src={gridTriple[key]} />
                 </div>
             ))}
         </div>

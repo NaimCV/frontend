@@ -21,18 +21,20 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Header/>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/contacto' element={<Contacto />} />
-        <Route path='/sesiones' element={<Sesiones />} />
-        <Route path='/sesiones/maternidad' element={<Maternidad />} />
-        <Route path='/sesiones/seguimiento' element={<Seguimiento />} />
-        <Route path='/sesiones/cake-smash' element={<CakeSmash />} />
-        <Route path='/sesiones/bath-milk' element={<BathMilk />} />
-        <Route path='/sesiones/hoy-me-toca-a-mi' element={<HoyMeTocaAmi />} />
-        <Route path='/sesiones/newborn' element={<Newborn />} />
-        <Route path='*' element={<NotFoundPage />} />
-      </Routes>
+      <div className='personal-body'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contacto' element={<Contacto />} />
+          <Route path='/sesiones' element={<Sesiones />} />
+          <Route path='/sesiones/maternidad' element={<Maternidad />} />
+          <Route path='/sesiones/seguimiento' element={<Seguimiento />} />
+          <Route path='/sesiones/cake-smash' element={<CakeSmash />} />
+          <Route path='/sesiones/bath-milk' element={<BathMilk />} />
+          <Route path='/sesiones/hoy-me-toca-a-mi' element={<HoyMeTocaAmi />} />
+          <Route path='/sesiones/newborn' element={<Newborn />} />
+          <Route path='*' element={<NotFoundPage />} />
+        </Routes>
+      </div>
       <footer className='footer'>
         <Footer />
       </footer>

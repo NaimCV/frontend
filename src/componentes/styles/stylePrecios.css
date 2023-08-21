@@ -1,0 +1,22 @@
+.Table {
+    display: table;
+    margin: 0 auto;
+}
+
+.Title {
+    display: table-caption;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.Heading {
+    display: table-row;
+    text-align: center;
+}
+
+.Cell {
+    display: table-cell;
+    padding-left: 50px;
+    padding-right: 50px;
+}
