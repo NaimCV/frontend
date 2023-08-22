@@ -2,7 +2,6 @@ import '../styles/stylePrecios.css'
 
 export default function GridPrecios({data, isMobile}) {
     var countData = Object.keys(data).length
-    console.log(data)
     if (isMobile) {
         if (countData > 2) {
             return (

@@ -1,7 +1,6 @@
 export default function DescripcionDetalladaSession({data, isMobile}) {
     const imagenes = data.imagenes
     const textos = data.textos
-    console.log(imagenes)
     if (isMobile) {
         return (
             <>
