@@ -149,7 +149,7 @@ export default function CakeSmash () {
                 }}>
                     <Collapse ghost={true} size="large">
                         {dataCollapse.map((val) => (
-                            <Panel header={Object.keys(val)}>
+                            <Panel header={<b>{Object.keys(val)}</b>}>
                                 <p>{Object.values(val)}</p>
                             </Panel>
                         ))}

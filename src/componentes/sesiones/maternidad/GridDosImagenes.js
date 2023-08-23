@@ -1,13 +1,11 @@
 import '../../../index.css'
 
 export default function GridDosImagenes ({props, rounded=false}) {
-    console.log(rounded)
     var imagenRounded = '0px'
     if (rounded) {
        imagenRounded = '9999px'
     }
     const imagenes = props
-    console.log(imagenRounded)
 
     return (
         <div className="row" style={{ marginTop: '50px' }}>
