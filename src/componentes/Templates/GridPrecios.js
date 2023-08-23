@@ -5,7 +5,7 @@ export default function GridPrecios({data, isMobile}) {
     if (isMobile) {
         if (countData > 2) {
             return (
-                <div style={{ textAlign: 'center', maxWidth: '90%', margin: 0, margin: 'auto' }}>
+                <div className='centrar-precios'>
                     <div>
                         {data.primera_opcion.titulo_opcion.map((val) => 
                         <h2>{val}</h2>)}
@@ -28,7 +28,7 @@ export default function GridPrecios({data, isMobile}) {
             )
         } else {
             return (
-                <div style={{ textAlign: 'center', maxWidth: '90%', margin: 0, margin: 'auto' }}>
+                <div className='centrar-precios'>
                     <div>
                         {data.primera_opcion.titulo_opcion.map((val) => 
                         <h2>{val}</h2>)}

@@ -1,121 +1,112 @@
-import DescripcionPack from "../../componentes/sesiones/maternidad/DescripcionPack"
-import GridDosImagenes from "../../componentes/sesiones/maternidad/GridDosImagenes"
+import BasicTemplate from "../../componentes/Templates/Sesiones/BasicTemplate"
+import { Image } from 'antd'
 
-import '../../index.css'
-
-
-
-export default function Maternidad(){
-    const textoPacks = [
-        {
-            'titulo': 'SESIÓN DE MATERNIDAD por 90€',
-            'contenido': '8 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
-            'linea1': 'Dispongo de una gran variedad de vestuario para que no os tengáis que preocupar por nada. (No dispongo de ropa interior) Os aconsejo siempre que',
-            'linea2': 'vengáis con ropa interior y un pantalón tejano, (no de premamá), no pasa nada si no os abrocha.',
-            'linea3': '1 fondo (blanco, negro o gris)',
-            'linea4': '2 cambios de ropa',
-            'linea5': 'fotografías individuales y familiares'
+export default function Maternidad() {
+    const imagenes = {
+        portada: {vanesa_17: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-17-2-scaled.jpg'},
+        grid_triple: {
+            judith_37: 'https://oliveda-photography.es/wp-content/uploads/2023/01/JUDITH-37-edited-scaled.jpg',
+            vanesa_08: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-08-2-edited-scaled.jpg',
+            carolina_45: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-45-edited-scaled.jpg'
+        }
+    }
+    const textos = {
+        inicial: [
+            'Las sesiones de maternidad son muy especiales.',
+            'Son los 10 meses más largos de nuestra vida, la espera se hace eterna, pero todo llega a su fin. Por eso es muy importante que guardéis',
+            'este recuerdo de forma profesional, para que con el tiempo recordéis esa barriguita tan especial, mágica y única.'
+            ]
+        }
+    const descripcioneDetallada = false
+    const dataPrecios = {
+        primera_opcion: {
+            titulo_opcion: ['SESIÓN DE MATERNIDAD por 90 €'],
+            descripcion: [
+                '8 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
+                'Dispongo de una gran variedad de vestuario para que no os tengáis que preocupar por nada. (No dispongo de ropa interior) Os aconsejo siempre que',
+                'vengáis con ropa interior y un pantalón tejano, (no de premamá), no pasa nada si no os abrocha.',
+                '1 fondo (blanco, negro o gris)',
+                '2 cambios de ropa',
+                'fotografías individuales y familiares'
+            ]
         },
-        {
-            'titulo': 'PACK LAVANDA por 135€',
-            'contenido': '12 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
-            'linea1': 'Dispongo de una gran variedad de vestuario para que no os tengáis que preocupar por nada. (No dispongo de ropa interior) Os aconsejo siempre que',
-            'linea2': 'vengáis con ropa interior y un pantalón tejano, (no de premamá), no pasa nada si no os abrocha.',
-            'linea3': '2 fondos (blanco, negro o gris)',
-            'linea4': '3 cambios de ropa',
-            'linea5': 'fotografías individuales y familiares',
-            'extra': true
+        segunda_opcion: {
+            titulo_opcion: [
+                'PACK LAVANDA por 135 €'
+            ],
+            descripcion: [
+                '12 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
+                'Dispongo de una gran variedad de vestuario para que no os tengáis que preocupar por nada. (No dispongo de ropa interior) Os aconsejo siempre que',
+                'vengáis con ropa interior y un pantalón tejano, (no de premamá), no pasa nada si no os abrocha.',
+                '2 fondos (blanco, negro o gris)',
+                '3 cambios de ropa',
+                'fotografías individuales y familiares'
+            ]
         },
-        {
-            'titulo': 'PACK PURPURA por 200€',
-            'contenido': '25 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
-            'linea1': 'Dispongo de una gran variedad de vestuario para que no os tengáis que preocupar por nada. (No dispongo de ropa interior) Os aconsejo siempre que',
-            'linea2': 'vengáis con ropa interior y un pantalón tejano, (no de premamá), no pasa nada si no os abrocha.',
-            'linea3': '2 fondos (blanco, negro o gris)',
-            'linea4': '3 cambios de ropa',
-            'linea5': 'fotografías individuales y familiares',
-            'extra': true
-        }]
-
-    const imagenes1 = [
-        "https://oliveda-photography.es/wp-content/uploads/2022/03/VERONICA-22-1-689x1024.jpg",
-        "https://oliveda-photography.es/wp-content/uploads/2022/03/VERONICA-04-683x1024.jpg"
+        tercera_opcion: {
+            titulo_opcion: [
+                'PACK PURPURA por 200 €'
+            ],
+            descripcion: [
+                '25 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
+                'Dispongo de una gran variedad de vestuario para que no os tengáis que preocupar por nada. (No dispongo de ropa interior) Os aconsejo siempre que',
+                'vengáis con ropa interior y un pantalón tejano, (no de premamá), no pasa nada si no os abrocha.',
+                '2 fondos (blanco, negro o gris)',
+                '3 cambios de ropa',
+                'fotografías individuales y familiares'
+            ]
+        }
+    }
+    const imagenesGridQuatro = {
+        primer_grid: {
+            imagen_grande: {
+                vanesa_49: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-49-edited-scaled.jpg'
+            },
+            imagenes_triple: {
+                judith_55: 'https://oliveda-photography.es/wp-content/uploads/2023/01/JUDITH-55-2048x1365.jpg',
+                vanesa_36: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-36-2048x1365.jpg',
+                carolina_18: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-18-2048x1365.jpg'
+            }
+        },
+        segundo_grid: {
+            imagen_grande: {
+                vanesa_23: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-23-2-scaled.jpg'
+            },
+            imagenes_triple: {
+                carolina_29: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-29-edited-scaled.jpg',
+                carolina_34: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-34-edited-scaled.jpg',
+                carolina_32: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-32-edited-scaled.jpg'
+            }
+        }
+    }
+    const dataCollapse = [
+        {'¿Cuándo hay que reservar esta sesión?': 'Lo ideal es reservar la sesión a la semana 25 de gestación, así tenemos margen para cuadrar el día y la hora de la sesión.'},
+        {'¿Cuándo se puede realizar la sesión?': 'Yo os recomiendo realizarla entre la semana 30/35 de gestación.'},
+        {'¿Quién puede participar en la sesión?': 'En este caso, la protagonista es la barriguita y mama, pero siempre podrán participar las personas más cercanas, como papa o mama, hermanitos o abuelo.'},
+        {'¿Qué tengo de traer?': 'Dispongo de vestuario de diferentes tallas, estilos y colores. No obstante, siempre os recomiendo que traigáis ropa interior del color que más os guste (yo recomiendo blanco o negro), y unos pantalones tejanos que no sean de pre-mama (no os preocupéis si no os abrocha, es normal jejeje). Para la pareja, hijos, abuelos… intentar ir acorde entre vosotros, es decir, de los mismos tonos. Lo ideal es tejano y algo blanco arriba, pero si os gusta más otro color, que todos vayáis igual.'},
+        {'Tengo estrías, varices, granitos, manchas…': 'Para las mamis o acompañantes que os acompleje estas cosas, a la hora de la edición las eliminamos. No os tenéis que preocupar de nada.'},
+        {'¿Forma de pago?': 'Hay que hacer una paga y señal de 50 € para la reserva de la sesión, la misma se devolverá en caso de no poder asistir por motivos justificables o avisando 24 h antes de la sesión. El resto se pagara en EFECTIVO el mismo día de la sesión. La paga y señal hay que realizarla una vez os hayáis puesto en contacto conmigo y hayamos reservado día y hora. Datos para el Bizum paga y señal: 640019860 ¡MUY IMPORTANTE! Concepto nombre de la mama + maternidad EJEMPLO: Paula maternidad'}
     ]
-    
-    const imagenes2 = [
-        "https://oliveda-photography.es/wp-content/uploads/2022/03/LORENA-26-1-1024x683.jpg",
-        "https://oliveda-photography.es/wp-content/uploads/2022/03/LORENA-eeeee-1024x682.jpg"
-    ]
-
-    const imagenes3 = [
-        "https://oliveda-photography.es/wp-content/uploads/2022/02/EVA-37-scaled.jpg",
-        "https://oliveda-photography.es/wp-content/uploads/2022/02/EVA-32-scaled.jpg"
-    ]
-
+    const descripcionSesionDesktop = "<h2>¿Cuándo hay que reservar esta sesión?</h2><p>Lo ideal es reservar la sesión a la semana 25 de gestación, así tenemos margen para cuadrar el día y la hora de la sesión.</p><h2>¿Cuándo se puede realizar la sesión?</h2><p>Yo os recomiendo realizarla entre la semana 30/35 de gestación.</p><h2>¿Quién puede participar en la sesión?</h2><p>En este caso, la protagonista es la barriguita y mama, pero siempre podrán participar las personas más cercanas, como papa o mama, hermanitos o abuelo.</p><h2>¿Qué tengo de traer?</h2><p>Dispongo de vestuario de diferentes tallas, estilos y colores. No obstante, siempre os recomiendo que traigáis ropa interior del color que más os guste (yo recomiendo blanco o negro), y unos pantalones tejanos que no sean de pre-mama (no os preocupéis si no os abrocha, es normal jejeje). Para la pareja, hijos, abuelos… intentar ir acorde entre vosotros, es decir, de los mismos tonos. Lo ideal es tejano y algo blanco arriba, pero si os gusta más otro color, que todos vayáis igual.</p><h2>Tengo estrías, varices, granitos, manchas…</h2><p>Para las mamis o acompañantes que os acompleje estas cosas, a la hora de la edición las eliminamos. No os tenéis que preocupar de nada.</p><h2>¿Forma de pago?</h2><p>Hay que hacer una paga y señal de 50 € para la reserva de la sesión, la misma se devolverá en caso de no poder asistir por motivos justificables o avisando 24 h antes de la sesión. El resto se pagara en <b>EFECTIVO</b> el mismo día de la sesión. La paga y señal hay que realizarla una vez os hayáis puesto en contacto conmigo y hayamos reservado día y hora. Datos para el Bizum paga y señal: 640019860 <b>¡MUY IMPORTANTE!</b> Concepto nombre de la mama + maternidad EJEMPLO: Paula maternidad</p>"
+    const data = {
+        titulo: 'Seguimiento',
+        imagenes,
+        textos,
+        descripcioneDetallada,
+        dataPrecios,
+        imagenesGridQuatro,
+        dataCollapse,
+        descripcionSesionDesktop
+    }
     return (
-        <>
-            <div>
-                <h1 style={{ textAlign: 'center' }}>Maternidad</h1>
-            </div>
-            <div>
-                <img alt="maternidad 1" 
-                    className="imagen-responsive-center-roudend"
-                    src="https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-17-2-1536x659.jpg"
-                />
-            </div>
-            <div className='description-align'>
-                <p>Las sesiones de maternidad son muy especiales.</p>
-                <p>Son los 10 meses más largos de nuestra vida, la espera se hace eterna, pero todo llega a su fin. Por eso es muy importante que guardéis</p>
-                <p>este recuerdo de forma profesional, para que con el tiempo recordéis esa barriguita tan especial, mágica y única.</p>
-            </div>
-            <div>
-                <img alt="maternidad 2" className="imagen-responsive-center" src="https://oliveda-photography.es/wp-content/uploads/2022/03/LORENA-45-scaled.jpg"/>
-            </div>
-            <div className='row' style={{ marginTop: '50px' }}>
-                <div className='column-img-trio-left'>
-                    <img alt="maternidad 3" className='cuadriculas-imagenes' style={{ borderRadius: '9999px' }} src="https://oliveda-photography.es/wp-content/uploads/2023/01/JUDITH-37-edited-1536x1536.jpg"/>
-                </div>
-                <div className='column-img-trio-left'>
-                    <img alt="maternidad 4" className='cuadriculas-imagenes' style={{ borderRadius: '9999px' }} src="https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-08-2-edited-1536x1536.jpg"/>
-                </div>
-                <div className='column-img-trio-left'>
-                    <img alt="maternidad 5" className='cuadriculas-imagenes' style={{ borderRadius: '9999px' }} src="https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-45-edited-1536x1536.jpg"/>
-                </div>
-            </div>
-            <div>
-                <DescripcionPack props={textoPacks}/>
-            </div>
-            <div style={{ marginTop: '100px' }}>
-                <img alt="maternidad 6" className="imagen-responsive-center" src="https://oliveda-photography.es/wp-content/uploads/2022/03/VERONICA-11-scaled.jpg" />
-            </div>
-            <GridDosImagenes props={imagenes1} />
-            <div>
-                <img alt="maternidad 7" className="imagen-responsive-center" src="https://oliveda-photography.es/wp-content/uploads/2022/03/VERONICA-346-scaled.jpg"/>
-            </div>
-            
-            <GridDosImagenes props={imagenes2} />
-            <div>
-                <img alt="maternidad 8" className="imagen-responsive-center" src="https://oliveda-photography.es/wp-content/uploads/2022/03/LORENA-53-scaled.jpg"/>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-                <h2>REPORTAJE MATERNIDAD EXTERIOR</h2>
-                <p>
-                    Preció 90€ (Rubí)<br></br>
-                    Sesión en EXTERIOR de 30-40 min<br></br>
-                    10 fotografías vía descarga<br></br>
-                    vestuario incluido<br></br>
-                    1 lugar (Rubí)<br></br>
-                    Fotografias individuales y en familia<br></br>
-                    <b>¡Fotografías en otro exterior a consultar precio!</b>
-                </p>
-            </div>
-            <div>
-                <img alt="maternidad 9" className="imagen-responsive-center" src="https://oliveda-photography.es/wp-content/uploads/2022/02/ROCIO-40-1-scaled.jpg"/>
-            </div>
-            <div>
-                <img alt="maternidad 10" className="imagen-responsive-center" src="https://oliveda-photography.es/wp-content/uploads/2022/02/EVA-51-1-scaled.jpg"/>
-            </div>
-            <GridDosImagenes props={imagenes3} />
-        </>
+    <>
+    <BasicTemplate data={data} />
+    <div style={{
+        marginTop: '50px',
+        textAlign: 'center'
+    }}>
+        <Image movable={false} style={{ borderRadius: '9999px' }} alt='lorena_45' src='https://oliveda-photography.es/wp-content/uploads/2023/01/LORENA-45-edited-1-scaled.jpg' />
+    </div>
+    </>
     )
 }

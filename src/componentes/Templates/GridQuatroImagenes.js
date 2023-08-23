@@ -1,4 +1,6 @@
 import GridTresImagenes from './GridTresImagenes'
+import { Image } from 'antd'
+
 import '../../index.css'
 
 export default function GridQuatroImagenes({data}) {
@@ -7,7 +9,7 @@ export default function GridQuatroImagenes({data}) {
     return (
         <div>
             <div style={{ marginTop: '10px' }}>
-                <img alt={Object.keys(imagenGrande)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenGrande)[0]} />
+                <Image alt={Object.keys(imagenGrande)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenGrande)[0]} />
             </div>
             <GridTresImagenes gridTriple={gridTrile}/>
         </div>

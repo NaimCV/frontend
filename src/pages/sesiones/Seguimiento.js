@@ -1,4 +1,5 @@
 import BasicTemplate from "../../componentes/Templates/Sesiones/BasicTemplate"
+import { Image } from 'antd'
 
 export default function Seguimiento() {
     const imagenes = {
@@ -107,6 +108,33 @@ export default function Seguimiento() {
         descripcionSesionDesktop
     }
     return (
+    <>
     <BasicTemplate data={data} />
+    <div style={{
+        marginTop: '50px',
+        textAlign: 'center'
+    }}>
+        <h2>Seguimiento con temática</h2>
+        <p><b>¡Novedad!</b> Os doy la opción de personalizar uno de los escenarios con algún atrezzo con temática.</p>
+    </div>
+    <div>
+        <div className='row' style={{ marginTop: '10px' }}>
+            <div className='column-img-left'>
+                <Image movable={false} style={{ borderRadius: '9999px' }} className="cuadriculas-imagenes" alt='iker_177' src='https://oliveda-photography.es/wp-content/uploads/2023/01/IKER-177-1-2048x1365.jpg' />
+            </div>
+            <div className='column-img-right'>
+                <Image movable={false} style={{ borderRadius: '9999px' }} className="cuadriculas-imagenes" alt='iker_199' src='https://oliveda-photography.es/wp-content/uploads/2023/01/IKER-199-1-2048x1365.jpg' />
+            </div>
+        </div>
+        <div className='row'>
+            <div className='column-img-left'>
+                <Image movable={false} style={{ borderRadius: '9999px' }} className="cuadriculas-imagenes" alt='iker_03' src='https://oliveda-photography.es/wp-content/uploads/2023/01/IKER-03-2048x1365.jpg' />
+            </div>
+            <div className='column-img-right'>
+                <Image movable={false} style={{ borderRadius: '9999px' }} className="cuadriculas-imagenes" alt='iker_10' src='https://oliveda-photography.es/wp-content/uploads/2023/01/IKER-10-2048x1366.jpg' />
+            </div>
+        </div>
+    </div>
+    </>
     )
 }

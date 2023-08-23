@@ -1,5 +1,5 @@
 import { useMediaQuery } from 'react-responsive'
-import { Collapse } from 'antd'
+import { Collapse, Image } from 'antd'
 import GridTresImagenes from '../GridTresImagenes'
 import DescripcionDetalladaSession from './DescripcionDetalladaSesion'
 import GridPrecios from '../GridPrecios'
@@ -34,7 +34,7 @@ export default function BasicTemplate({data}) {
             <Mobile>
             <h1 style={{ textAlign: 'center' }}>{titulo}</h1>
                 <div>
-                    <img alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenPortada)[0]}/>
+                    <Image alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenPortada)[0]}/>
                 </div>
                 <div className='description-align' style={{ marginTop: '10px' }}>
                     {textoInicial.map((texto) => (
@@ -65,11 +65,12 @@ export default function BasicTemplate({data}) {
             <Default>
                 <h1 style={{ textAlign: 'center' }}>{titulo}</h1>
                 <div>
-                    <img alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenPortada)[0]}/>
+                    <Image alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenPortada)[0]}/>
                 </div>
                 <div className='description-align'>
-                    <p>Es una pasada la evolución y los cambios que hacen durante el primer año de vida,</p>
-                    <p>es por eso que se realizan este tipo de sesiones, para que no os perdáis detalle de cada etapa y podáis recordar todos sus cambios.</p>
+                {textoInicial.map((texto) => (
+                        <p>{texto}</p>
+                    ))}
                 </div>
                 <GridTresImagenes gridTriple={gridTriple}/>
                 {descripcionSesionDetallada ? <DescripcionDetalladaSession data={descripcionSesionDetallada} isMobile={false}/> : null}

@@ -164,6 +164,12 @@ body {
   margin-left: 1%;
 }
 
+.column-img-duo-left {
+  float: left;
+  width: 45%;
+  margin-left: 1%;
+}
+
 .column-img-trio-left-radius {
   float: left;
   width: 32%;
