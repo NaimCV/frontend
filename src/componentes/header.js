@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 
 export default function Header() {
+    const logo = 'https://oliveda-photography.es/wp-content/uploads/2023/06/logo.png'
     return (
         <>
             <header>
@@ -15,7 +16,7 @@ export default function Header() {
                                 <img
                                 alt="logo 1"
                                 style={{ maxWidth: '10%' }}
-                                src='https://oliveda-photography.es/wp-content/uploads/2023/06/logo.png'/>
+                                src={logo}/>
                             </NavLink>
                         </div>
                         <div style={{ display: 'inline-block' }}><MenuDesktop /></div>
@@ -28,7 +29,7 @@ export default function Header() {
                                 <img
                                 alt="logo 2"
                                 style={{ maxWidth: '40%' }}
-                                src='https://oliveda-photography.es/wp-content/uploads/2023/06/logo.png'/>
+                                src={logo}/>
                             </NavLink>
                         </div>
                         <div><MenuDesktop /></div>
