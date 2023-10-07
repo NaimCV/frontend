@@ -5,7 +5,7 @@ import Home from './pages/inicio'
 import Header from './componentes/header'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Footer from './componentes/footer'
+// import Footer from './componentes/footer'
 import Contacto from './pages/Contacto'
 import NotFoundPage from './pages/NotFoundPage'
 import Maternidad from './pages/sesiones/Maternidad'
@@ -15,6 +15,10 @@ import BathMilk from './pages/sesiones/BathMilk'
 import Sesiones from './pages/sesiones/Sesiones'
 import HoyMeTocaAmi from './pages/sesiones/HoyMeTocaAmi'
 import Newborn from './pages/sesiones/Newborn'
+import Footer from './componentes/Footer/Footer'
+
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
