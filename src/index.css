@@ -34,6 +34,7 @@ code {
   display: flex; 
   margin-left: auto; 
   margin-right: auto;
+  margin-top: 20px;
 }
 
 .social-footer {
@@ -164,6 +165,12 @@ body {
   margin-left: 1%;
 }
 
+.column-trio-left-footer {
+  float: left;
+  width: 32%;
+  margin-left: 1%;
+}
+
 .column-img-duo-left {
   float: left;
   width: 45%;
@@ -242,4 +249,74 @@ section img:hover {
 
 .text-movil {
   max-width: 80%;
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #000000;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.column img {
+  max-width: 50%;
+  height: auto;
+}
+
+.footer-content h2 {
+  margin-bottom: 10px;
+  color: #9D9D9D;
+  font-size: 25px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  color: #FFFFFF;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.footer-content form {
+  margin-top: 10px;
+}
+
+.footer-content button {
+  margin: 10px;
+  border-radius: 12px;
+}
+
+.footer-content input {
+  border-radius: 12px;
 }

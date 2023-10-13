@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 
 export default function Header() {
-    const logo = 'https://oliveda-photography.es/wp-content/uploads/2023/06/logo.png'
+    const logo = 'https://oliveda-photography.es/wp-content/uploads/2023/10/logo-negro.png'
     return (
         <>
             <header>
@@ -15,7 +15,7 @@ export default function Header() {
                             <NavLink to='/'>
                                 <img
                                 alt="logo 1"
-                                style={{ maxWidth: '10%' }}
+                                style={{ maxWidth: '10%', marginTop: '20px' }}
                                 src={logo}/>
                             </NavLink>
                         </div>
