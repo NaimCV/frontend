@@ -1,5 +1,5 @@
 import React from 'react'
-import MenuDesktop from './MenuDesktop'
+import MenuDesktop from '../MenuDesktop'
 import {BrowserView, MobileView} from 'react-device-detect'
 import { NavLink } from 'react-router-dom'
 
