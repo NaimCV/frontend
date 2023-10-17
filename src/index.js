@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import Home from './pages/inicio'
-import Header from './componentes/header'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Contacto from './pages/Contacto'
@@ -14,9 +13,8 @@ import BathMilk from './pages/sesiones/BathMilk'
 import Sesiones from './pages/sesiones/Sesiones'
 import HoyMeTocaAmi from './pages/sesiones/HoyMeTocaAmi'
 import Newborn from './pages/sesiones/Newborn'
-import { FaInstagram, FaWhatsapp, FaFacebook, FaTiktok } from 'react-icons/fa'
-import { MdOutlineMail } from 'react-icons/md'
 import Footer from './componentes/Footer/Footer'
+import Header from './componentes/Header/Header'
 
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
