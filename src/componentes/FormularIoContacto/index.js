@@ -1,28 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Form, Input, Select } from 'antd'
-import { Resend } from 'resend'
 
 const { Option } = Select
 
-const onFinish = (values) => {
+async function onFinish(values) {
     console.log('Success:', values)
-    const resend = new Resend('re_bdLu724b_PLopYNaxdGQTWB9WAnP4U9UK');
-
-    (async function() {
-        try {
-            console.log('entra en la funcion')
-          const data = await resend.emails.send({
-            from: 'Acme <onboarding@resend.dev>',
-            to: ['naimcv93@gmail.com'],
-            subject: 'Hello World',
-            html: '<strong>It works!</strong>'
-          });
-      
-          console.log(data);
-        } catch (error) {
-          console.error(error);
-        }
-      })();
+    const res = await fetch('/api/send', {
+        method: 'POST'
+    })
+    const data = await res.json()
+    console.log(data)
 }
 
 const onFinishFailed = (errorInfo) => {
@@ -45,7 +32,6 @@ export default function FormularioContacto() {
             initialValues={{
             remember: true,
             }}
-            onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             autoComplete="off"
         >
@@ -103,7 +89,13 @@ export default function FormularioContacto() {
                 span: 16,
             }}
             >
-            <Button type="primary" htmlType="submit">
+            <Button type="primary" htmlType="submit" onClick={async () => {
+                const res = await fetch('/api/send', {
+                    method: 'POST',
+                })
+                const data = await res.json()
+                console.log(data)
+            }}>
                 Enviar
             </Button>
             </Form.Item>
