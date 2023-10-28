@@ -105,7 +105,6 @@ const Header = () => {
                 <div><a href="/sesiones/familiar">Familiar</a></div>
             </div>
         </div>
-        <NavItem><a href="/sesiones">Sesiones</a></NavItem>
         <NavItem><a href="/contacto">Contacto</a></NavItem>
       </MobileNav>
     </Nav>
