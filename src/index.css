@@ -5,11 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #000000
 }
 
 .personal-body {
-  max-width: 90%;
+  max-width: 75%;
   margin: 0 auto
+}
+
+img {
+  max-width: 1440px;
 }
 
 code {
@@ -21,6 +26,12 @@ code {
   padding-top: 50px;
 }
 
+div .center {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .footer {
   color: #FFFFFF;
   background-color: #000000;
@@ -29,8 +40,7 @@ code {
 }
 
 .footer-logo {
-  max-width: 200px; 
-  /* height: auto; */
+  max-width: 200px;
   display: flex; 
   margin-left: auto; 
   margin-right: auto;
@@ -71,13 +81,7 @@ a, a:hover, a:visited, a:active {
   margin-top: 50px;
 }
 
-.imagen-responsive-center-roudend {
-  width: 90%; 
-  height: auto;
-  display: flex; 
-  margin-left: auto; 
-  margin-right: auto;
-  margin-top: 10px;
+.imagen-responsive-center-roudend { 
   border-radius: 9999px;
 }
 
@@ -155,7 +159,6 @@ body {
 }
 
 .cuadriculas-imagenes {
-  width: 100%;
   height: auto;
 }
 
@@ -319,4 +322,28 @@ footer {
 
 .footer-content input {
   border-radius: 12px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  overflow: auto;
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.dropdown button {
+  border: none;
+  background-color: #FFFFFF;
+}
+
+.dropdown-options div {
+  padding-left: 15px;
 }

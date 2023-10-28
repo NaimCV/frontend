@@ -64,7 +64,7 @@ export default function BasicTemplate({data}) {
             </Mobile>
             <Default>
                 <h1 style={{ textAlign: 'center' }}>{titulo}</h1>
-                <div>
+                <div className='center'>
                     <Image alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenPortada)[0]}/>
                 </div>
                 <div className='description-align'>
