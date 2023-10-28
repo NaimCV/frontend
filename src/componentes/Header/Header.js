@@ -83,6 +83,9 @@ const Header = () => {
                 <div><a href="/sesiones/maternidad">Maternidad</a></div>
                 <div><a href="/sesiones/newborn">Newborn</a></div>
                 <div><a href="/sesiones/seguimiento">Seguimiento</a></div>
+                <div><a href="/sesiones/cake-smash">Cake-Smash</a></div>
+                <div><a href="/sesiones/cake-smash-infantiles">Cake-Smash Infantiles</a></div>
+                <div><a href="/sesiones/familiar">Familiar</a></div>
             </div>
         </div>
         </NavItem>
@@ -97,6 +100,9 @@ const Header = () => {
                 <div><a href="/sesiones/maternidad">Maternidad</a></div>
                 <div><a href="/sesiones/newborn">Newborn</a></div>
                 <div><a href="/sesiones/seguimiento">Seguimiento</a></div>
+                <div><a href="/sesiones/cake-smash">Cake-Smash</a></div>
+                <div><a href="/sesiones/cake-smash-infantil">Cake-Smash Infantil</a></div>
+                <div><a href="/sesiones/familiar">Familiar</a></div>
             </div>
         </div>
         <NavItem><a href="/sesiones">Sesiones</a></NavItem>

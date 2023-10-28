@@ -49,9 +49,9 @@ export default function Sesiones () {
                     </NavLink>
                 </Col>
                 <Col span={6}>
-                    <NavLink to='/sesiones/bath-milk'>
+                    <NavLink to='/sesiones/cake-smash-infantil'>
                         <img 
-                        alt="bath-milk"
+                        alt="cake-smash-infantil"
                         style={{
                             'maxWidth': '100%'
                         }}

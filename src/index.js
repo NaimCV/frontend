@@ -9,7 +9,6 @@ import NotFoundPage from './pages/NotFoundPage'
 import Maternidad from './pages/sesiones/Maternidad'
 import Seguimiento from './pages/sesiones/Seguimiento'
 import CakeSmash from './pages/sesiones/CakeSmash'
-import BathMilk from './pages/sesiones/BathMilk'
 import Sesiones from './pages/sesiones/Sesiones'
 import HoyMeTocaAmi from './pages/sesiones/HoyMeTocaAmi'
 import Newborn from './pages/sesiones/Newborn'
@@ -32,7 +31,7 @@ root.render(
           <Route path='/sesiones/maternidad' element={<Maternidad />} />
           <Route path='/sesiones/seguimiento' element={<Seguimiento />} />
           <Route path='/sesiones/cake-smash' element={<CakeSmash />} />
-          <Route path='/sesiones/bath-milk' element={<BathMilk />} />
+          {/* <Route path='/sesiones/cake-smash-infantil' element={<CakeSmashInfantil />} /> */}
           <Route path='/sesiones/hoy-me-toca-a-mi' element={<HoyMeTocaAmi />} />
           <Route path='/sesiones/newborn' element={<Newborn />} />
           <Route path='*' element={<NotFoundPage />} />
