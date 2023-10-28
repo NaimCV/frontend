@@ -1,5 +1,4 @@
 import BasicTemplate from "../../componentes/Templates/Sesiones/BasicTemplate"
-import { Image } from 'antd'
 
 export default function Seguimiento() {
     const imagenes = {
