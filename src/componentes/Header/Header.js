@@ -1,41 +1,109 @@
-import React from 'react'
-import MenuDesktop from '../MenuDesktop'
-import {BrowserView, MobileView} from 'react-device-detect'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import styled from 'styled-components';
+import Hamburger from './Hamburguer';
 
+const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: #fff;
+  padding: 1rem;
+`;
 
-export default function Header() {
-    const logo = 'https://oliveda-photography.es/wp-content/uploads/2023/10/logo-negro.png'
-    return (
-        <>
-            <header>
-                <BrowserView>
-                    <div style={{ textAlign: 'center' }}>
-                        <div>
-                            <NavLink to='/'>
-                                <img
-                                alt="logo 1"
-                                style={{ maxWidth: '10%', marginTop: '20px' }}
-                                src={logo}/>
-                            </NavLink>
-                        </div>
-                        <div style={{ display: 'inline-block' }}><MenuDesktop /></div>
-                    </div>
-                </BrowserView>
-                <MobileView>
-                <div style={{ textAlign: 'center' }}>
-                        <div>
-                            <NavLink to='/'>
-                                <img
-                                alt="logo 2"
-                                style={{ maxWidth: '40%' }}
-                                src={logo}/>
-                            </NavLink>
-                        </div>
-                        <div><MenuDesktop /></div>
-                    </div>
-                </MobileView>
-            </header>
-        </>
-    )
-}
+const NavItem = styled.li`
+  list-style: none;
+  margin: 0 1rem;
+
+  a {
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #F684FF;
+    }
+  }
+`;
+
+const MobileNavToggle = styled.button`
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #F684FF;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const DesktopNav = styled.ul`
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
+
+const MobileNav = styled.ul`
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
+`;
+
+const Header = () => {
+  const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
+
+  return (
+    <Nav>
+      <div><a href="/"><img alt="logo" src="https://oliveda-photography.es/wp-content/uploads/2023/10/logo.png" style={{ maxWidth: "25%" }}/></a></div>
+      <MobileNavToggle onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
+        {isMobileNavOpen ? <Hamburger/> : <Hamburger/>}
+      </MobileNavToggle>
+      <DesktopNav>
+        <NavItem><a href="/">Inicio</a></NavItem>
+        <NavItem><a href="/sobre-mi">Sobre Mí</a></NavItem>
+        <NavItem>
+        <div class="dropdown">
+            <button>Sesiones</button>
+            <div class="dropdown-options">
+                <div><a href="/sesiones/maternidad">Maternidad</a></div>
+                <div><a href="/sesiones/newborn">Newborn</a></div>
+                <div><a href="/sesiones/seguimiento">Seguimiento</a></div>
+            </div>
+        </div>
+        </NavItem>
+        <NavItem><a href="/contacto">Contacto</a></NavItem>
+      </DesktopNav>
+      <MobileNav style={{ display: isMobileNavOpen ? 'flex' : 'none' }}>
+        <NavItem><a href="/">Inicio</a></NavItem>
+        <NavItem><a href="/sobre-mi">Sobre Mí</a></NavItem>
+        <div class="dropdown">
+            <button>Sesiones</button>
+            <div class="dropdown-options">
+                <div><a href="/sesiones/maternidad">Maternidad</a></div>
+                <div><a href="/sesiones/newborn">Newborn</a></div>
+                <div><a href="/sesiones/seguimiento">Seguimiento</a></div>
+            </div>
+        </div>
+        <NavItem><a href="/sesiones">Sesiones</a></NavItem>
+        <NavItem><a href="/contacto">Contacto</a></NavItem>
+      </MobileNav>
+    </Nav>
+  );
+};
+
+export default Header
