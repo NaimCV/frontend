@@ -60,7 +60,7 @@ export default function Maternidad() {
     const imagenesGridQuatro = {
         primer_grid: {
             imagen_grande: {
-                vanesa_49: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-49-edited-scaled.jpg'
+                maternidad1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/maternidad1-scaled.jpg'
             },
             imagenes_triple: {
                 judith_55: 'https://oliveda-photography.es/wp-content/uploads/2023/01/JUDITH-55-2048x1365.jpg',

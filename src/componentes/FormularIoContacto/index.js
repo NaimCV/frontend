@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Form, Input, Select } from 'antd'
 import { Resend } from 'resend'
 
@@ -30,6 +30,7 @@ const onFinishFailed = (errorInfo) => {
 }
 
 export default function FormularioContacto() {
+    return (<>Estamos trabajando en esta página, pronto estara disponible.</>)
     return(
         <Form
             name="basic"

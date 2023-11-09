@@ -76,35 +76,13 @@ const Header = () => {
       <DesktopNav>
         <NavItem><a href="/">Inicio</a></NavItem>
         <NavItem><a href="/sobre-mi">Sobre Mí</a></NavItem>
-        <NavItem>
-        <div class="dropdown">
-            <button>Sesiones</button>
-            <div class="dropdown-options">
-                <div><a href="/sesiones/maternidad">Maternidad</a></div>
-                <div><a href="/sesiones/newborn">Newborn</a></div>
-                <div><a href="/sesiones/seguimiento">Seguimiento</a></div>
-                <div><a href="/sesiones/cake-smash">Cake-Smash</a></div>
-                <div><a href="/sesiones/cake-smash-infantiles">Cake-Smash Infantiles</a></div>
-                <div><a href="/sesiones/familiar">Familiar</a></div>
-            </div>
-        </div>
-        </NavItem>
+        <NavItem><a href='/sesiones'>Sesiones</a></NavItem>
         <NavItem><a href="/contacto">Contacto</a></NavItem>
       </DesktopNav>
       <MobileNav style={{ display: isMobileNavOpen ? 'flex' : 'none' }}>
         <NavItem><a href="/">Inicio</a></NavItem>
         <NavItem><a href="/sobre-mi">Sobre Mí</a></NavItem>
-        <div class="dropdown">
-            <button>Sesiones</button>
-            <div class="dropdown-options">
-                <div><a href="/sesiones/maternidad">Maternidad</a></div>
-                <div><a href="/sesiones/newborn">Newborn</a></div>
-                <div><a href="/sesiones/seguimiento">Seguimiento</a></div>
-                <div><a href="/sesiones/cake-smash">Cake-Smash</a></div>
-                <div><a href="/sesiones/cake-smash-infantil">Cake-Smash Infantil</a></div>
-                <div><a href="/sesiones/familiar">Familiar</a></div>
-            </div>
-        </div>
+        <NavItem><a href='/sesiones'>Sesiones</a></NavItem>
         <NavItem><a href="/contacto">Contacto</a></NavItem>
       </MobileNav>
     </Nav>
