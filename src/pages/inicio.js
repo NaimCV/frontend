@@ -41,23 +41,23 @@ export default function Home() {
             },
             enlace: "/sesiones/cake-smash"
         },
-        {
-            titulo: "Cake Smash Infantiles",
-            imagenes: {
-                cake_smash_infantiles_1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/tres-1-scaled.jpg',
-                cake_smash_infantiles_2: 'https://oliveda-photography.es/wp-content/uploads/2023/11/tres-2-scaled.jpg',
-                cake_smash_infantiles_3: 'https://oliveda-photography.es/wp-content/uploads/2023/11/tres-3-scaled.jpg',
-            },
-            enlace: "/sesiones/cake-smash-infantiles"
-        },
-        {
-            titulo: "Familiares",
-            imagenes: {
-                marc_02: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-02-4-edited-scaled.jpg',
-                marc_46: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-46-edited-scaled.jpg'
-            },
-            enlace: "/sesiones/familiar"
-        }
+        //{
+            //titulo: "Cake Smash Infantiles",
+            //imagenes: {
+                //cake_smash_infantiles_1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/tres-1-scaled.jpg',
+                //cake_smash_infantiles_2: 'https://oliveda-photography.es/wp-content/uploads/2023/11/tres-2-scaled.jpg',
+                //cake_smash_infantiles_3: 'https://oliveda-photography.es/wp-content/uploads/2023/11/tres-3-scaled.jpg',
+            //},
+            //enlace: "/sesiones/cake-smash-infantiles"
+        //},
+        //{
+            //titulo: "Familiares",
+            //imagenes: {
+                //marc_02: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-02-4-edited-scaled.jpg',
+                //marc_46: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-46-edited-scaled.jpg'
+            //},
+            //enlace: "/sesiones/familiar"
+        //}
     ]
     return (
         <>
