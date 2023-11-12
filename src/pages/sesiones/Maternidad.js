@@ -22,7 +22,7 @@ export default function Maternidad() {
         primera_opcion: {
             titulo_opcion: ['SESIÓN DE MATERNIDAD por 90 €'],
             descripcion: [
-                '8 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
+                '6 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
                 'Dispongo de una gran variedad de vestuario para que no os tengáis que preocupar por nada. (No dispongo de ropa interior) Os aconsejo siempre que',
                 'vengáis con ropa interior y un pantalón tejano, (no de premamá), no pasa nada si no os abrocha.',
                 '1 fondo (blanco, negro o gris)',
