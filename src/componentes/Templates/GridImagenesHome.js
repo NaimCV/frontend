@@ -4,7 +4,6 @@ import { Col, Row, Image, Button, Divider } from 'antd';
 export default function GridDosImagenes({data}) {
     const imagenes = data.imagenes
     const enlace = data.enlace
-    console.log(enlace)
     return(
         <div style={{ marginTop: '50px' }}>
             <div>

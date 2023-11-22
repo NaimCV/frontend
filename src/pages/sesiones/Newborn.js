@@ -18,8 +18,8 @@ export default function Newborn() {
             ]
         }
     const descripcioneDetallada = false
-    const dataPrecios = {
-        primera_opcion: {
+    const dataPrecios = [
+        {
             titulo_opcion: ['PACK ACHUCHABLE por 150 €'],
             descripcion: [
                 '8 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
@@ -30,7 +30,7 @@ export default function Newborn() {
                 '1 fondo familiar con papás y hermanitos'
             ]
         },
-        segunda_opcion: {
+        {
             titulo_opcion: [
                 'PACK TERNURA por 220 €'
             ],
@@ -43,7 +43,7 @@ export default function Newborn() {
                 '3 fondos (personalizado con los colores y posicionadores que más os gusten)'
             ]
         }
-    }
+    ]
     const imagenesGridQuatro = {
         primer_grid: {
             imagen_grande: {
