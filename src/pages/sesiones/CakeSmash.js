@@ -77,45 +77,20 @@ export default function CakeSmash() {
             }
         }
     }
-    const dataPrecios = {
-        primera_opcion: {
-            titulo_opcion: ['SEGUIMIENTO 120 €'],
+    const dataPrecios = [
+        {
+            titulo_opcion: ['Precio de la sesión: 160€'],
             descripcion: [
-                'Sesión en estudio de 30/40 min aprox.',
-                '10 fotografías vía descarga',
-                'Vestuario incluido',
-                '3 fondos (a escoger color)'
-            ]
-        },
-        segunda_opcion: {
-            titulo_opcion: [
-                'PACK SEGUIMIENTO',
-                '(3, 6 y 9 meses) - 320 €'
-            ],
-            descripcion: [
-                'Sesión en estudio de 30/40 min aprox.',
-                '10 fotografías vía descarga (cada sesión, un total de 30 fotografías)',
-                'Vestuario incluido',
-                '3 fondos (a escoger color)'
-            ]
-        },
-        tercera_opcion: {
-            titulo_opcion: [
-                'PACK SEGUIMIENTO + SMASH CAKE',
-                '4, 8 y 12 (la ultima smash cake) - 360 €'
-            ],
-            descripcion: [
-                'Sesión en estudio de 30/40 min aprox.',
-                '10 fotografías vía descarga (cada sesión de seguimiento +',
-                '15 fotografías en la sesión smash cake). Un total de 35',
-                'fotografías)',
-                'Vestuario incluido',
-                '3 fondos (a escoger color) para las sesiones de',
-                'seguimiento',
-                '1 fondo personalizado para el smash cake'
+                '15 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
+                'Sesión en estudio de 1 hora aprox. Siempre voy al ritmo de cada peque.',
+                'Pastel básico o donuts incluido.',
+                'Todo el vestuario del peque. Dispongo de una gran variedad de atrezo para que no os tengáis que preocupar por nada. (incluyendo coronas, cubre pañales, peleles y topper…)',
+                '1 fondo ( personalizado con los colores o temática que más os gusten )',
+                '1 fondo para las fotografías familiares.',
+                'Baño espumoso y calentito.'
             ]
         }
-    }
+    ]
     const imagenesGridQuatro = {
         primer_grid: {
             imagen_grande: {
@@ -155,7 +130,7 @@ export default function CakeSmash() {
     ]
     const descripcionSesionDesktop = "<h2>¿Cuándo se realizan estas sesiones?</h2><p>Esta sesión se realiza desde el primer mes de vida, hasta los 12 meses. Cualquier mes es bueno para guardar un buen recuerdo de esta etapa.</p><h2>¿Complementos y vestuario?</h2><p>Yo dispongo de una gran variedad de ropa y accesorios para ellos. No obstante, si tenéis alguna prenda o accesorio que os gustaría traer, solo me lo tenéis que decir para preparar un escenario acorde.</p><h2>¿Forma de pago?</h2><p>Hay que hacer una paga y señal de <strong>50 €</strong> para la reserva de la sesión, la misma se devolverá en caso de no poder asistir por motivos justificables o avisando 24 h antes de la sesión. El</p><p>resto se pagara en <strong>EFECTIVO</strong> el mismo día de la sesión.</p><p>La paga y señal hay que realizarla una vez os hayáis puesto en contacto conmigo y hayamos reservado día y hora.</p><p>Datos para el Bizum paga y señal: <strong>640019860</strong></p><p><strong>¡MUY IMPORTANTE!</strong> Concepto nombre del bebe + seguimiento EJEMPLO: Paula seguimiento</p>"
     const data = {
-        titulo: 'Seguimiento',
+        titulo: 'Cake Smash',
         imagenes,
         textos,
         descripcioneDetallada,
@@ -165,33 +140,8 @@ export default function CakeSmash() {
         descripcionSesionDesktop
     }
     return (
-    <>
-    <BasicTemplate data={data} />
-    <div style={{
-        marginTop: '50px',
-        textAlign: 'center'
-    }}>
-        <h2>Seguimiento con temática</h2>
-        <p><b>¡Novedad!</b> Os doy la opción de personalizar uno de los escenarios con algún atrezzo con temática.</p>
-    </div>
-    <div>
-        {/* <div className='row' style={{ marginTop: '10px' }}>
-            <div className='column-img-left'>
-                <Image movable={false} style={{ borderRadius: '9999px' }} className="cuadriculas-imagenes" alt='iker_177' src='https://oliveda-photography.es/wp-content/uploads/2023/01/IKER-177-1-2048x1365.jpg' />
-            </div>
-            <div className='column-img-right'>
-                <Image movable={false} style={{ borderRadius: '9999px' }} className="cuadriculas-imagenes" alt='iker_199' src='https://oliveda-photography.es/wp-content/uploads/2023/01/IKER-199-1-2048x1365.jpg' />
-            </div>
-        </div>
-        <div className='row'>
-            <div className='column-img-left'>
-                <Image movable={false} style={{ borderRadius: '9999px' }} className="cuadriculas-imagenes" alt='iker_03' src='https://oliveda-photography.es/wp-content/uploads/2023/01/IKER-03-2048x1365.jpg' />
-            </div>
-            <div className='column-img-right'>
-                <Image movable={false} style={{ borderRadius: '9999px' }} className="cuadriculas-imagenes" alt='iker_10' src='https://oliveda-photography.es/wp-content/uploads/2023/01/IKER-10-2048x1366.jpg' />
-            </div>
-        </div> */}
-    </div>
-    </>
+    <body>
+        <BasicTemplate data={data} />
+    </body>
     )
 }

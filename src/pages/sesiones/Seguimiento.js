@@ -19,8 +19,8 @@ export default function Seguimiento() {
             ]
         }
     const descripcioneDetallada = false
-    const dataPrecios = {
-        primera_opcion: {
+    const dataPrecios = [
+        {
             titulo_opcion: ['SEGUIMIENTO 120 €'],
             descripcion: [
                 'Sesión en estudio de 30/40 min aprox.',
@@ -29,7 +29,7 @@ export default function Seguimiento() {
                 '3 fondos (a escoger color)'
             ]
         },
-        segunda_opcion: {
+        {
             titulo_opcion: [
                 'PACK SEGUIMIENTO',
                 '(3, 6 y 9 meses) - 320 €'
@@ -41,7 +41,7 @@ export default function Seguimiento() {
                 '3 fondos (a escoger color)'
             ]
         },
-        tercera_opcion: {
+        {
             titulo_opcion: [
                 'PACK SEGUIMIENTO + SMASH CAKE',
                 '4, 8 y 12 (la ultima smash cake) - 360 €'
@@ -57,7 +57,7 @@ export default function Seguimiento() {
                 '1 fondo personalizado para el smash cake'
             ]
         }
-    }
+    ]
     const imagenesGridQuatro = {
         primer_grid: {
             imagen_grande: {

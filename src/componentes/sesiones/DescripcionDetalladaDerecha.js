@@ -1,7 +1,6 @@
 import { Col, Row, Image } from 'antd'
 
 export default function DescripcionDetalladaSesionDerecha({imagenes, textos, isMobile=false}) {
-    console.log(imagenes[0])
     return(
         <>
             <Row justify='space-around' align="middle">

@@ -1,3 +1,4 @@
+import { Image } from 'antd'
 import DescripcionDetalladaSesionIzquierda from '../../sesiones/DescripcionDetalladaIzquierda'
 import DescripcionDetalladaSesionDerecha from '../../sesiones/DescripcionDetalladaDerecha'
 
@@ -12,8 +13,8 @@ export default function DescripcionDetalladaSession({data, isMobile}) {
                 <DescripcionDetalladaSesionIzquierda imagenes={imagenes.segunda_seccion} textos={textos.segunda_seccion} isMobile={true}/>
                 <DescripcionDetalladaSesionIzquierda imagenes={imagenes.tercera_seccion} textos={textos.tercera_seccion} isMobile={true}/>
                 <DescripcionDetalladaSesionIzquierda imagenes={imagenes.cuarta_seccion} textos={textos.cuarta_seccion} isMobile={true}/>
-                <div>
-                    <img alt="cakesmash 18" className='imagen-responsive-center-roudend' src="https://oliveda-photography.es/wp-content/uploads/2021/12/SANTIAGO-11-scaled.jpg"/>
+                <div className='center'>
+                    <Image alt="santiago_11" className='imagen-responsive-center-roudend' src="https://oliveda-photography.es/wp-content/uploads/2021/12/SANTIAGO-11-scaled.jpg"/>
                 </div>
             </>
         )
@@ -26,8 +27,8 @@ export default function DescripcionDetalladaSession({data, isMobile}) {
             <DescripcionDetalladaSesionDerecha imagenes={imagenes.segunda_seccion} textos={textos.segunda_seccion}/>
             <DescripcionDetalladaSesionIzquierda imagenes={imagenes.tercera_seccion} textos={textos.tercera_seccion}/>
             <DescripcionDetalladaSesionDerecha imagenes={imagenes.cuarta_seccion} textos={textos.cuarta_seccion}/>
-            <div>
-                <img alt="cakesmash 18" className='imagen-responsive-center-roudend' src="https://oliveda-photography.es/wp-content/uploads/2021/12/SANTIAGO-11-scaled.jpg"/>
+            <div className='center'>
+                <Image alt="santiago_11" className='imagen-responsive-center-roudend' src="https://oliveda-photography.es/wp-content/uploads/2021/12/SANTIAGO-11-scaled.jpg"/>
             </div>
         </>
     )
