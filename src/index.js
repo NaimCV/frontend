@@ -14,6 +14,7 @@ import HoyMeTocaAmi from './pages/sesiones/HoyMeTocaAmi'
 import Newborn from './pages/sesiones/Newborn'
 import Footer from './componentes/Footer/Footer'
 import Header from './componentes/Header/Header'
+import Productos from './pages/Productos'
 
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -22,7 +23,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header/>
+      <Header />
       <div className='personal-body'>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -34,6 +35,7 @@ root.render(
           {/* <Route path='/sesiones/cake-smash-infantil' element={<CakeSmashInfantil />} /> */}
           <Route path='/sesiones/hoy-me-toca-a-mi' element={<HoyMeTocaAmi />} />
           <Route path='/sesiones/newborn' element={<Newborn />} />
+          <Route path='/productos' element={<Productos />} />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </div>
