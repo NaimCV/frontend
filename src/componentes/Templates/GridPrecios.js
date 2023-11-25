@@ -4,7 +4,7 @@ export default function GridPrecios({data, isMobile}) {
     if (isMobile) {
         return (
             <div className='centrar-precios'>
-                {data.map((val) => 
+                {Object.values(data).map((val) => 
                     <div style={{ marginTop: '50px' }}>
                         <h2>{val.titulo_opcion}</h2>
                         {val.descripcion.map((desc) =>
@@ -18,7 +18,7 @@ export default function GridPrecios({data, isMobile}) {
        return(
             <div className='Table' style={{ marginTop: '50px' }}>
             <div className='Heading'>
-                    {data.map((val) => 
+                    {Object.values(data).map((val) =>
                         <div className='Cell'>
                             <h2>{val.titulo_opcion}</h2>
                             {val.descripcion.map((desc) =>

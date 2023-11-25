@@ -17,6 +17,10 @@ img {
   max-width: 1440px;
 }
 
+a {
+  text-decoration: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

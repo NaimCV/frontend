@@ -2,7 +2,7 @@ import React from 'react'
 import { FaInstagram, FaWhatsapp, FaFacebook, FaTiktok } from 'react-icons/fa'
 import { MdOutlineMail } from 'react-icons/md'
 
-export default function Footer () {
+export default function FooterWeb () {
   return (
     <>
         <footer style={{ marginTop: '200px' }}>

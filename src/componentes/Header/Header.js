@@ -58,7 +58,7 @@ const MobileNav = styled.ul`
   }
 `;
 
-export default function Header() {
+export default function HeaderWeb() {
   const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
   const items = [
     {
