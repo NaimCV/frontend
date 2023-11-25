@@ -20,7 +20,7 @@ export default function Maternidad() {
     const descripcioneDetallada = false
     const dataPrecios = {
         primera_opcion: {
-            titulo_opcion: ['SESIÓN DE MATERNIDAD por 90 €'],
+            titulo_opcion: ['SESIÓN DE MATERNIDAD 90 €'],
             descripcion: [
                 '6 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
                 'Dispongo de una gran variedad de vestuario para que no os tengáis que preocupar por nada. (No dispongo de ropa interior) Os aconsejo siempre que',
@@ -32,7 +32,7 @@ export default function Maternidad() {
         },
         segunda_opcion: {
             titulo_opcion: [
-                'PACK LAVANDA por 135 €'
+                'PACK LAVANDA 135 €'
             ],
             descripcion: [
                 '12 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
@@ -45,7 +45,7 @@ export default function Maternidad() {
         },
         tercera_opcion: {
             titulo_opcion: [
-                'PACK PURPURA por 200 €'
+                'PACK PURPURA 200 €'
             ],
             descripcion: [
                 '25 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
