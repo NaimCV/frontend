@@ -1,4 +1,7 @@
-import React from 'react';
+import React from 'react'
+import { useMediaQuery } from 'react-responsive'
+import { ContactsOutlined, HomeOutlined, CameraOutlined } from '@ant-design/icons'
+import { Menu } from 'antd'
 import styled from 'styled-components';
 import Hamburger from './Hamburguer';
 
@@ -44,15 +47,6 @@ const MobileNavToggle = styled.button`
   }
 `;
 
-const DesktopNav = styled.ul`
-  display: flex;
-  flex-direction: row;
-
-  @media (max-width: 767px) {
-    display: none;
-  }
-`;
-
 const MobileNav = styled.ul`
   display: none;
   flex-direction: column;
@@ -64,29 +58,126 @@ const MobileNav = styled.ul`
   }
 `;
 
-const Header = () => {
+export default function Header() {
   const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
-
+  const items = [
+    {
+      label: (
+        <a href="/">
+          Inicio
+        </a>
+      ),
+      key: 'inicio',
+      icon: <HomeOutlined />,
+    },
+    {
+      label: (
+        <a href="/sobre-mi">
+          Sobre mí
+        </a>
+      ),
+      key: 'sobre-mi'
+    },
+    {
+      label: 'Sesiones',
+      key: 'sesiones',
+      icon: <CameraOutlined />,
+      children: [
+        {
+          type: 'group',
+          label: (
+            <a href="/sesiones/maternidad">
+              Maternidad
+            </a>
+          )
+        },
+        {
+          type: 'group',
+          label: (
+            <a href="/sesiones/newborn">
+              Newborn
+            </a>
+          )
+        },
+        {
+          type: 'group',
+          label: (
+            <a href="/sesiones/seguimiento">
+              Seguimiento
+            </a>
+          )
+        },
+        {
+          type: 'group',
+          label: (
+            <a href="/sesiones/cake-smash">
+              Cake-Smash
+            </a>
+          )
+        }
+      ],
+    },
+    {
+      label: (
+        <a href="/contacto">
+          Contacto
+        </a>
+      ),
+      key: 'contacto',
+      icon: <ContactsOutlined />,
+    },
+    {
+      label: (
+        <a href="/productos">
+          Productos
+        </a>
+      ),
+      key: 'productos',
+      icon: <ContactsOutlined />,
+    },
+  ]
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 })
+    return isMobile ? children : null
+  }
+  const Default = ({ children }) => {
+  const isNotMobile = useMediaQuery({ minWidth: 768 })
+    return isNotMobile ? children : null
+  }
   return (
-    <Nav>
-      <div><a href="/"><img alt="logo" src="https://oliveda-photography.es/wp-content/uploads/2023/10/logo.png" style={{ maxWidth: "25%" }}/></a></div>
-      <MobileNavToggle onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
-        {isMobileNavOpen ? <Hamburger/> : <Hamburger/>}
-      </MobileNavToggle>
-      <DesktopNav>
-        <NavItem><a href="/">Inicio</a></NavItem>
-        <NavItem><a href="/sobre-mi">Sobre Mí</a></NavItem>
-        <NavItem><a href='/sesiones'>Sesiones</a></NavItem>
-        <NavItem><a href="/contacto">Contacto</a></NavItem>
-      </DesktopNav>
-      <MobileNav style={{ display: isMobileNavOpen ? 'flex' : 'none' }}>
-        <NavItem><a href="/">Inicio</a></NavItem>
-        <NavItem><a href="/sobre-mi">Sobre Mí</a></NavItem>
-        <NavItem><a href='/sesiones'>Sesiones</a></NavItem>
-        <NavItem><a href="/contacto">Contacto</a></NavItem>
-      </MobileNav>
-    </Nav>
-  );
-};
-
-export default Header
+    <>
+    <Default>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div>
+          <a href="/">
+            <img
+              alt="logo"
+              src="https://oliveda-photography.es/wp-content/uploads/2023/10/logo.png"
+              style={{ maxWidth: "25%" }}
+            />
+          </a>
+        </div>
+        <div style={{ display: "flex", justifyContent: "flex-end", width: "100%" }}>
+          <div>
+            <Menu mode="horizontal" items={items} style={{ width: "100%", padding: "0 20px" }}/>
+          </div>
+        </div>
+      </div>
+    </Default>
+    <Mobile>
+      <Nav>
+        <div><a href="/"><img alt="logo" src="https://oliveda-photography.es/wp-content/uploads/2023/10/logo.png" style={{ maxWidth: "25%" }}/></a></div>
+          <MobileNavToggle onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
+          {isMobileNavOpen ? <Hamburger/> : <Hamburger/>}
+        </MobileNavToggle>
+        <MobileNav style={{ display: isMobileNavOpen ? 'flex' : 'none' }}>
+          <NavItem><a href="/">Inicio</a></NavItem>
+          <NavItem><a href="/sobre-mi">Sobre Mí</a></NavItem>
+          <NavItem><a href='/sesiones'>Sesiones</a></NavItem>
+          <NavItem><a href="/contacto">Contacto</a></NavItem>
+        </MobileNav>
+      </Nav>
+    </Mobile>
+    </>
+  )
+}
