@@ -16,7 +16,7 @@ export default function FormularioContacto() {
         const enviarCorreo = async () => {
             setLoading(true)
             message.loading("Enviando...")
-              const response = await fetch('http://127.0.0.1:5000/@send_email', {
+              const response = await fetch('https://naimcv.pythonanywhere.com/@send_email', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
