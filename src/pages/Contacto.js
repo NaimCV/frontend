@@ -1,4 +1,4 @@
-import FormularioContacto from "../componentes/FormularIoContacto"
+import FormularioContacto from "../componentes/FormularioContacto"
 
 export default function Contacto() {
     return (
