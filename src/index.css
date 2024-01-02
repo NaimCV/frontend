@@ -351,3 +351,14 @@ footer {
 .dropdown-options div {
   padding-left: 15px;
 }
+
+.title {
+  text-align: center;
+}
+
+.container-text {
+  max-width: 800px;
+  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+}

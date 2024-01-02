@@ -4,6 +4,7 @@ import { ContactsOutlined, HomeOutlined, CameraOutlined } from '@ant-design/icon
 import { Menu } from 'antd'
 import styled from 'styled-components';
 import Hamburger from './Hamburguer';
+import logo from '../../images/logo.png'
 
 const Nav = styled.nav`
   display: flex;
@@ -153,7 +154,7 @@ export default function Header() {
           <a href="/">
             <img
               alt="logo"
-              src="https://oliveda-photography.es/wp-content/uploads/2023/10/logo.png"
+              src={logo}
               style={{ maxWidth: "25%" }}
             />
           </a>
@@ -167,7 +168,7 @@ export default function Header() {
     </Default>
     <Mobile>
       <Nav>
-        <div><a href="/"><img alt="logo" src="https://oliveda-photography.es/wp-content/uploads/2023/10/logo.png" style={{ maxWidth: "25%" }}/></a></div>
+        <div><a href="/"><img alt="logo" src={logo} style={{ maxWidth: "33%" }}/></a></div>
           <MobileNavToggle onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
           {isMobileNavOpen ? <Hamburger/> : <Hamburger/>}
         </MobileNavToggle>

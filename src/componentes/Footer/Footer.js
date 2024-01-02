@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaInstagram, FaWhatsapp, FaFacebook, FaTiktok } from 'react-icons/fa'
 import { MdOutlineMail } from 'react-icons/md'
+import logo from '../../images/logo-color.png'
 
 export default function FooterWeb () {
   return (
@@ -10,7 +11,7 @@ export default function FooterWeb () {
                 <div class="footer-content">
                     <div class="column">
                     <a href='/'>
-                        <img src="https://oliveda-photography.es/wp-content/uploads/2023/10/logo-color.png" alt="Logo" />
+                        <img src={logo} alt="Logo" />
                     </a>
                     {/* <form name='contacto-email'>
                         <p>Suscribete a nuestra newsletter</p>
@@ -31,6 +32,13 @@ export default function FooterWeb () {
                             <li><a href="https://www.instagram.com/martaoliveda.estudiofotografia/" rel="noopener noreferrer" target={'_blank'}><FaInstagram /></a></li>
                             <li><a href="https://www.facebook.com/photography.oliveda/" rel="noopener noreferrer" target={'_blank'}><FaFacebook /></a></li>
                             <li><a href="https://www.tiktok.com/@olivedaphotography" rel="noopener noreferrer" target={'_blank'}><FaTiktok /></a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h2>Condiciones y privacidad</h2>
+                        <ul style={{ color: '#FFFFFF' }}>
+                            <li><a href="/terminos-condiciones">Términos y Condiciones Generales</a></li>
+                            <li><a href="/condiciones-venta">Condiciones de venta</a></li>
                         </ul>
                     </div>
                 </div>
