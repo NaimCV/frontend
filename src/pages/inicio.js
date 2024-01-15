@@ -4,57 +4,58 @@ import '../index.css'
 import GridImagenesHome from '../componentes/Templates/GridImagenesHome'
 
 export default function Home() {
+    const path_images = 'https://imagedelivery.net/RVD8Hi-5w-BqE-vPVWqcaw/<image_id>/normal'
     const imagenesSesiones = [
         {
             titulo: "Maternidad",
             imagenes: {
-                maternidad_1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/maternidad1-scaled.jpg',
-                maternidad_2: 'https://oliveda-photography.es/wp-content/uploads/2023/11/maternidad2-scaled.jpg',
-                maternidad_3: 'https://oliveda-photography.es/wp-content/uploads/2023/11/maternidad3-scaled.jpg',
+                maternidad_1: path_images.replace('<image_id>', 'd3a6635d-3f99-4bdc-646d-bf3bb1926900'),
+                maternidad_2: path_images.replace('<image_id>', 'dab818ae-299e-4702-c2c0-051ac374b400'),
+                maternidad_3: path_images.replace('<image_id>', 'b9471234-55fc-4b0c-cfba-5fd85931a800'),
             },
             enlace: "/sesiones/maternidad"
         },
         {
             titulo: "Newborn",
             imagenes: {
-                newborn_1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/1-scaled.jpg',
-                newborn_2: 'https://oliveda-photography.es/wp-content/uploads/2023/11/2-scaled.jpg',
-                newborn_3: 'https://oliveda-photography.es/wp-content/uploads/2023/11/3-scaled.jpg',
+                newborn_1: path_images.replace('<image_id>', 'd4ceb50e-94bf-4080-6a50-e7328e4aa400'),
+                newborn_2: path_images.replace('<image_id>', '98dbca7d-5d32-447a-fabf-2156cb1d4900'),
+                newborn_3: path_images.replace('<image_id>', '57e06032-4e99-44dd-bcc1-365d28cb1d00'),
             },
             enlace: "/sesiones/newborn"
         },
         {
             titulo: "Seguimiento",
             imagenes: {
-                seguimiento_1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/seguimiento-1-scaled.jpg',
-                seguimiento_2: 'https://oliveda-photography.es/wp-content/uploads/2023/11/seguimiento-2-scaled.jpg',
-                seguimiento_3: 'https://oliveda-photography.es/wp-content/uploads/2023/11/seguimiento-3-scaled.jpg',
+                seguimiento_1: path_images.replace('<image_id>', 'f5f5606f-4df1-4e02-b988-434b9383f400'),
+                seguimiento_2: path_images.replace('<image_id>', 'df7835b9-26c1-4c6e-e69d-7ec6d4b6f100'),
+                seguimiento_3: path_images.replace('<image_id>', '2c2b7d1c-46d1-4f87-0e71-6ef7b3fd8700'),
             },
             enlace: "/sesiones/seguimiento"
         },
         {
             titulo: "Cake Smash",
             imagenes: {
-                cake_smash_1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/cake_smash_1-scaled.jpg',
-                cake_smash_2: 'https://oliveda-photography.es/wp-content/uploads/2023/11/cake_smash_2-scaled.jpg',
-                cake_smash_3: 'https://oliveda-photography.es/wp-content/uploads/2023/11/cake_smash_3-scaled.jpg',
+                cake_smash_1: path_images.replace('<image_id>', '3c87281b-3d6a-4d99-8c7b-2e758e90b800'),
+                cake_smash_2: path_images.replace('<image_id>', '42b065ab-6eb2-4f11-0d8d-5c180aedce00'),
+                cake_smash_3: path_images.replace('<image_id>', '6d780ae7-a466-4e50-3ad9-272e9dae6000'),
             },
             enlace: "/sesiones/cake-smash"
         },
         //{
             //titulo: "Cake Smash Infantiles",
             //imagenes: {
-                //cake_smash_infantiles_1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/tres-1-scaled.jpg',
-                //cake_smash_infantiles_2: 'https://oliveda-photography.es/wp-content/uploads/2023/11/tres-2-scaled.jpg',
-                //cake_smash_infantiles_3: 'https://oliveda-photography.es/wp-content/uploads/2023/11/tres-3-scaled.jpg',
+                //cake_smash_infantiles_1: path_images.replace('<image_id>', ''),
+                //cake_smash_infantiles_2: path_images.replace('<image_id>', ''),
+                //cake_smash_infantiles_3: path_images.replace('<image_id>', ''),
             //},
             //enlace: "/sesiones/cake-smash-infantiles"
         //},
         //{
             //titulo: "Familiares",
             //imagenes: {
-                //marc_02: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-02-4-edited-scaled.jpg',
-                //marc_46: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-46-edited-scaled.jpg'
+                //marc_02: path_images.replace('<image_id>', ''),
+                //marc_46: path_images.replace('<image_id>', '')
             //},
             //enlace: "/sesiones/familiar"
         //}
