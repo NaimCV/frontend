@@ -4,7 +4,7 @@ import '../index.css'
 import GridImagenesHome from '../componentes/Templates/GridImagenesHome'
 
 export default function Home() {
-    const path_images = 'https://imagedelivery.net/RVD8Hi-5w-BqE-vPVWqcaw/<image_id>/normal'
+    const path_images = 'https://imagedelivery.net/RVD8Hi-5w-BqE-vPVWqcaw/<image_id>/public'
     const imagenesSesiones = [
         {
             titulo: "Maternidad",
