@@ -1,13 +1,14 @@
 import BasicTemplate from "../../componentes/Templates/Sesiones/BasicTemplate"
 import { Image } from 'antd'
+import { path_images } from "../../consts"
 
 export default function Newborn() {
     const imagenes = {
-        portada: {dafne_66: 'https://oliveda-photography.es/wp-content/uploads/2023/01/DAFNE-66-edited-scaled.jpg'},
+        portada: {newborn1: path_images.replace('<image_id>', '')},
         grid_triple: {
-            bernat_09: 'https://oliveda-photography.es/wp-content/uploads/2023/01/BERNAT-09-edited-scaled.jpg',
-            sofia_07: 'https://oliveda-photography.es/wp-content/uploads/2023/01/SOFIA-07-edited-scaled.jpg',
-            dafne_20000: 'https://oliveda-photography.es/wp-content/uploads/2023/01/DAFNE-20000-edited-scaled.jpg'
+            newborn2: path_images.replace('<image_id>', ''),
+            newborn3: path_images.replace('<image_id>', ''),
+            newborn4: path_images.replace('<image_id>', '')
         }
     }
     const textos = {
@@ -47,22 +48,22 @@ export default function Newborn() {
     const imagenesGridQuatro = {
         primer_grid: {
             imagen_grande: {
-                vega_55: 'https://oliveda-photography.es/wp-content/uploads/2023/01/DAFNE-62-scaled.jpg'
+                newborn1: path_images.replace('<image_id>', '')
             },
             imagenes_triple: {
-                logan_8: 'https://oliveda-photography.es/wp-content/uploads/2023/11/logan-8-scaled.jpg',
-                aritz_38: 'https://oliveda-photography.es/wp-content/uploads/2023/11/ARITZ-38-scaled.jpg',
-                vega_24: 'https://oliveda-photography.es/wp-content/uploads/2023/11/vega-24-scaled.jpg'
+                newborn5: path_images.replace('<image_id>', ''),
+                newborn6: path_images.replace('<image_id>', ''),
+                newborn7: path_images.replace('<image_id>', '')
             }
         },
         segundo_grid: {
             imagen_grande: {
-                nil_28: 'https://oliveda-photography.es/wp-content/uploads/2023/01/NIL-28-2-edited-scaled.jpg'
+                newborn8: path_images.replace('<image_id>', '')
             },
             imagenes_triple: {
-                vega_7: 'https://oliveda-photography.es/wp-content/uploads/2023/11/vega-7-scaled.jpg',
-                vega_24_1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/vega-24-1-scaled.jpg',
-                vega_13: 'https://oliveda-photography.es/wp-content/uploads/2023/11/vega-13-scaled.jpg'
+                newborn9: path_images.replace('<image_id>', ''),
+                newborn10: path_images.replace('<image_id>', ''),
+                newborn11: path_images.replace('<image_id>', '')
             }
         }
     }
@@ -93,7 +94,7 @@ export default function Newborn() {
         marginTop: '50px',
         textAlign: 'center'
     }}>
-        <Image movable={false} style={{ borderRadius: '9999px' }} alt='elan_12' src='https://oliveda-photography.es/wp-content/uploads/2023/01/ELAN-12-edited-scaled.jpg' />
+        <Image movable={false} style={{ borderRadius: '9999px' }} alt='newborn12' src='https://oliveda-photography.es/wp-content/uploads/2023/01/ELAN-12-edited-scaled.jpg' />
     </div>
     </>
     )
