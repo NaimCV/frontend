@@ -2,9 +2,9 @@ import React  from 'react'
 import SliderHome from '../componentes/home/slider_home'
 import '../index.css'
 import GridImagenesHome from '../componentes/Templates/GridImagenesHome'
+import { path_images } from '../consts'
 
 export default function Home() {
-    const path_images = 'https://imagedelivery.net/RVD8Hi-5w-BqE-vPVWqcaw/<image_id>/public'
     const imagenesSesiones = [
         {
             titulo: "Maternidad",
