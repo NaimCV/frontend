@@ -4,11 +4,11 @@ import { path_images } from "../../consts"
 
 export default function Newborn() {
     const imagenes = {
-        portada: {newborn1: path_images.replace('<image_id>', '')},
+        portada: {newborn1: path_images.replace('<image_id>', '40386b12-a5d9-4e22-62e4-645b255b2800')},
         grid_triple: {
-            newborn2: path_images.replace('<image_id>', ''),
-            newborn3: path_images.replace('<image_id>', ''),
-            newborn4: path_images.replace('<image_id>', '')
+            newborn2: path_images.replace('<image_id>', 'adbc4ccf-80ad-463b-1eef-60331667d700'),
+            newborn3: path_images.replace('<image_id>', '242b1cd6-6538-4a54-943c-9067d537bb00'),
+            newborn4: path_images.replace('<image_id>', '7e74f4c9-f8ea-4083-22ac-cd3780868200')
         }
     }
     const textos = {
@@ -48,22 +48,22 @@ export default function Newborn() {
     const imagenesGridQuatro = {
         primer_grid: {
             imagen_grande: {
-                newborn1: path_images.replace('<image_id>', '')
+                newborn1: path_images.replace('<image_id>', '0212c76d-def0-4e5a-9aa8-dd677da01a00')
             },
             imagenes_triple: {
-                newborn5: path_images.replace('<image_id>', ''),
-                newborn6: path_images.replace('<image_id>', ''),
-                newborn7: path_images.replace('<image_id>', '')
+                newborn5: path_images.replace('<image_id>', 'f0df6a81-3575-415e-e568-de00c8f9e900'),
+                newborn6: path_images.replace('<image_id>', '377410d8-60b3-4b48-d894-637f57357300'),
+                newborn7: path_images.replace('<image_id>', '619b88df-251b-4d34-6a68-bf71975e3c00')
             }
         },
         segundo_grid: {
             imagen_grande: {
-                newborn8: path_images.replace('<image_id>', '')
+                newborn1: path_images.replace('<image_id>', '0212c76d-def0-4e5a-9aa8-dd677da01a00')
             },
             imagenes_triple: {
-                newborn9: path_images.replace('<image_id>', ''),
-                newborn10: path_images.replace('<image_id>', ''),
-                newborn11: path_images.replace('<image_id>', '')
+                newborn9: path_images.replace('<image_id>', '6f69e465-7e06-4783-d8bb-e7a0feba3100'),
+                newborn10: path_images.replace('<image_id>', 'ba68fbdf-ec51-40fc-eb2f-4e1de7189300'),
+                newborn11: path_images.replace('<image_id>', '1482efe1-ae98-42a5-897c-b915341ace00')
             }
         }
     }
@@ -94,7 +94,7 @@ export default function Newborn() {
         marginTop: '50px',
         textAlign: 'center'
     }}>
-        <Image movable={false} style={{ borderRadius: '9999px' }} alt='newborn12' src='https://oliveda-photography.es/wp-content/uploads/2023/01/ELAN-12-edited-scaled.jpg' />
+        {/* <Image movable={false} style={{ borderRadius: '9999px' }} alt='newborn12' src='https://oliveda-photography.es/wp-content/uploads/2023/01/ELAN-12-edited-scaled.jpg' /> */}
     </div>
     </>
     )
