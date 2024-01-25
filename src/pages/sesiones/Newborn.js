@@ -94,7 +94,7 @@ export default function Newborn() {
         marginTop: '50px',
         textAlign: 'center'
     }}>
-        {/* <Image movable={false} style={{ borderRadius: '9999px' }} alt='newborn12' src='https://oliveda-photography.es/wp-content/uploads/2023/01/ELAN-12-edited-scaled.jpg' /> */}
+        <Image movable={false} style={{ borderRadius: '9999px' }} alt='newborn12' src='https://oliveda-photography.es/wp-content/uploads/2023/01/ELAN-12-edited-scaled.jpg' />
     </div>
     </>
     )
