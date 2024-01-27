@@ -375,3 +375,9 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
+.alinear-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
