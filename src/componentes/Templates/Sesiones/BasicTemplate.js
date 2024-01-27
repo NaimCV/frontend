@@ -2,8 +2,6 @@ import { useMediaQuery } from 'react-responsive'
 import { Collapse, Image, Card, Col, Row } from 'antd'
 import GridTresImagenes from '../GridTresImagenes'
 import DescripcionDetalladaSession from './DescripcionDetalladaSesion'
-import GridPrecios from '../GridPrecios'
-import GridQuatroImagenes from '../GridQuatroImagenes'
 import parse from 'html-react-parser'
 import { path_images } from '../../../consts'
 
@@ -12,15 +10,16 @@ import '../../../index.css'
 export default function BasicTemplate({data}) {
     const titulo = data.titulo
     const imagenPortada = data.imagenes.portada
-    const gridTriple = data.imagenes.grid_triple
+    const gridTriple1 = data.imagenes.grid_triple1
+    const gridTriple2 = data.imagenes.grid_triple2
+    const gridTriple3 = data.imagenes.grid_triple3
     const descripcionSesionDetallada = data.descripcioneDetallada
     const textoInicial = data.textos.inicial
     const dataPrecios = data.dataPrecios
-    const imagenesGridQuatro = data.imagenesGridQuatro
     const { Panel } = Collapse
     const dataCollapse = data.dataCollapse
     const descripcionSesionDesktop = data.descripcionSesionDesktop
-    const { Meta } = Card
+    console.log(Object.values(imagenPortada)[0])
 
     const Mobile = ({ children }) => {
         const isMobile = useMediaQuery({ maxWidth: 767 })
@@ -36,14 +35,14 @@ export default function BasicTemplate({data}) {
             <Mobile>
             <h1 style={{ textAlign: 'center' }}>{titulo}</h1>
                 <div>
-                    <Image alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenPortada)[0]}/>
+                    <Image alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={path_images.replace('<image_id>', Object.values(imagenPortada)[0])}/>
                 </div>
                 <div className='description-align' style={{ marginTop: '10px' }}>
                     {textoInicial.map((texto) => (
                         <p>{texto}</p>
                     ))}
                 </div>
-                <GridTresImagenes gridTriple={gridTriple} />
+                <GridTresImagenes gridTriple={gridTriple1} />
                 {descripcionSesionDetallada ? <DescripcionDetalladaSession data={descripcionSesionDetallada} isMobile={true}/> : null}
                 {/* <GridPrecios data={dataPrecios} isMobile={true} /> */}
                 <div style={{marginTop: '50px'}}>
@@ -63,9 +62,29 @@ export default function BasicTemplate({data}) {
                         </Card>
                     )}
                 </div>
-                {Object.values(imagenesGridQuatro).map((val) => 
-                    <GridQuatroImagenes data={val}/>
-                )}
+                {data.plaquita ? 
+                    <div style={{ marginTop: '30px'}}>
+                        <h2 style={{ textAlign: 'center' }}>¿Quieres una plaquita personalizada con su nombre?</h2>
+                        <Row
+                        gutter={{
+                            xs: 8,
+                            sm: 16,
+                            md: 24,
+                            lg: 32,
+                        }}
+                        >
+                            <Col className="gutter-row" span={12}>
+                                <Image className='imagen-responsive-center-roudend' style={{ width: '100%' }} src={path_images.replace('<image_id>', '46007b9a-2802-4646-b1b9-ea44e572f900')}/>
+                            </Col>
+                            <Col className="gutter-row" span={12}>
+                                <Image className='imagen-responsive-center-roudend' style={{ width: '100%' }} src={path_images.replace('<image_id>', '46007b9a-2802-4646-b1b9-ea44e572f900')}/>
+                            </Col>
+                        </Row>
+                    </div>
+                : null
+                }
+                <GridTresImagenes gridTriple={gridTriple2} />
+                <GridTresImagenes gridTriple={gridTriple3} />
                 <div style={{
                 marginTop: '30px',
                 textAlign: 'center',
@@ -84,14 +103,14 @@ export default function BasicTemplate({data}) {
             <Default>
                 <h1 style={{ textAlign: 'center' }}>{titulo}</h1>
                 <div className='center'>
-                    <Image alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={Object.values(imagenPortada)[0]}/>
+                    <Image alt={Object.keys(imagenPortada)[0]} className='imagen-responsive-center-roudend' src={path_images.replace('<image_id>', Object.values(imagenPortada)[0])}/>
                 </div>
                 <div className='description-align'>
                 {textoInicial.map((texto) => (
                         <p>{texto}</p>
                     ))}
                 </div>
-                <GridTresImagenes gridTriple={gridTriple}/>
+                <GridTresImagenes gridTriple={gridTriple1}/>
                 {descripcionSesionDetallada ? <DescripcionDetalladaSession data={descripcionSesionDetallada} isMobile={false}/> : null}
                 {/* <GridPrecios data={dataPrecios} isMobile={false} /> */}
                 <div style={{ marginTop: '50px'}}>
@@ -111,22 +130,30 @@ export default function BasicTemplate({data}) {
                         )}
                     </Row>
                 </div>
-                {Object.values(imagenesGridQuatro).map((val) => 
-                    <GridQuatroImagenes data={val}/>
-                )}
-                <div>
-                    <Card
-                        title="¿Quieres una plaquita con su nombre?"
-                        hoverable
-                        style={{
-                        width: 'auto',
-                        textAlign: 'center'
+                {data.plaquita ?
+                    <div style={{ marginTop: '50px'}}>
+                        <h2 style={{ textAlign: 'center' }}>¿Quieres una plaquita personalizada con su nombre?</h2>
+                        <Row
+                        gutter={{
+                            xs: 8,
+                            sm: 16,
+                            md: 24,
+                            lg: 32,
                         }}
-                        cover={<img alt="example" src={path_images.replace('<image_id>', '46007b9a-2802-4646-b1b9-ea44e572f900')} />}
-                    >
-                       
-                    </Card>
-                </div>
+                        style={{ marginTop: '20px'}}
+                        >
+                            <Col className="gutter-row" span={12}>
+                                <Image className='imagen-responsive-center-roudend' style={{ width: '100%' }} src={path_images.replace('<image_id>', '46007b9a-2802-4646-b1b9-ea44e572f900')}/>
+                            </Col>
+                            <Col className="gutter-row" span={12}>
+                                <Image className='imagen-responsive-center-roudend' style={{ width: '100%' }} src={path_images.replace('<image_id>', 'f5531c02-1466-44cf-534a-a71ac3320100')}/>
+                            </Col>
+                        </Row>
+                    </div>
+                : null
+                }
+                <GridTresImagenes gridTriple={gridTriple2} />
+                <GridTresImagenes gridTriple={gridTriple3} />
                 <div style={{
                     marginTop: '50px',
                     textAlign: 'center'

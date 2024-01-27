@@ -4,7 +4,17 @@ import { Image } from 'antd'
 export default function Maternidad() {
     const imagenes = {
         portada: {vanesa_17: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-17-2-scaled.jpg'},
-        grid_triple: {
+        grid_triple1: {
+            judith_37: 'https://oliveda-photography.es/wp-content/uploads/2023/01/JUDITH-37-edited-scaled.jpg',
+            vanesa_08: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-08-2-edited-scaled.jpg',
+            carolina_45: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-45-edited-scaled.jpg'
+        },
+        grid_triple2: {
+            judith_37: 'https://oliveda-photography.es/wp-content/uploads/2023/01/JUDITH-37-edited-scaled.jpg',
+            vanesa_08: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-08-2-edited-scaled.jpg',
+            carolina_45: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-45-edited-scaled.jpg'
+        },
+        grid_triple3: {
             judith_37: 'https://oliveda-photography.es/wp-content/uploads/2023/01/JUDITH-37-edited-scaled.jpg',
             vanesa_08: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-08-2-edited-scaled.jpg',
             carolina_45: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-45-edited-scaled.jpg'
@@ -58,28 +68,28 @@ export default function Maternidad() {
         //     ]
         // }
     }
-    const imagenesGridQuatro = {
-        primer_grid: {
-            imagen_grande: {
-                maternidad1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/maternidad1-scaled.jpg'
-            },
-            imagenes_triple: {
-                judith_55: 'https://oliveda-photography.es/wp-content/uploads/2023/01/JUDITH-55-2048x1365.jpg',
-                vanesa_36: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-36-2048x1365.jpg',
-                carolina_18: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-18-2048x1365.jpg'
-            }
-        },
-        segundo_grid: {
-            imagen_grande: {
-                vanesa_23: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-23-2-scaled.jpg'
-            },
-            imagenes_triple: {
-                carolina_29: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-29-edited-scaled.jpg',
-                carolina_34: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-34-edited-scaled.jpg',
-                carolina_32: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-32-edited-scaled.jpg'
-            }
-        }
-    }
+    // const imagenesGridQuatro = {
+    //     primer_grid: {
+    //         imagen_grande: {
+    //             maternidad1: 'https://oliveda-photography.es/wp-content/uploads/2023/11/maternidad1-scaled.jpg'
+    //         },
+    //         imagenes_triple: {
+    //             judith_55: 'https://oliveda-photography.es/wp-content/uploads/2023/01/JUDITH-55-2048x1365.jpg',
+    //             vanesa_36: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-36-2048x1365.jpg',
+    //             carolina_18: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-18-2048x1365.jpg'
+    //         }
+    //     },
+    //     segundo_grid: {
+    //         imagen_grande: {
+    //             vanesa_23: 'https://oliveda-photography.es/wp-content/uploads/2023/01/VANESA-23-2-scaled.jpg'
+    //         },
+    //         imagenes_triple: {
+    //             carolina_29: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-29-edited-scaled.jpg',
+    //             carolina_34: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-34-edited-scaled.jpg',
+    //             carolina_32: 'https://oliveda-photography.es/wp-content/uploads/2023/01/CAROLINA-32-edited-scaled.jpg'
+    //         }
+    //     }
+    // }
     const dataCollapse = [
         {'¿Cuándo hay que reservar esta sesión, y cuando se realiza?': 'Realizó esta sesión entre la semana 30/35 de gestación. Dependiendo del volumen de la barriguita que tengas y de cómo te encuentres. Así que lo ideal sería reservar en el segundo trimestre (entre la semana 14/27).'},
         {'¿Quién puede participar en la sesión?': 'En este caso, la protagonista es mamá y su barriguita, pero siempre podrán participar las personas más cercanas, como papá o mamá, hermanit@s o abuel@s.'},
@@ -96,9 +106,10 @@ export default function Maternidad() {
         textos,
         descripcioneDetallada,
         dataPrecios,
-        imagenesGridQuatro,
+        // imagenesGridQuatro,
         dataCollapse,
-        descripcionSesionDesktop
+        descripcionSesionDesktop,
+        plaquita: true
     }
     return (
     <>
