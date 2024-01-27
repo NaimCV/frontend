@@ -1,25 +1,31 @@
 import { useMediaQuery } from 'react-responsive'
-import { Collapse, Image, Card, Col, Row } from 'antd'
+import { Collapse, Image, Card, Col, Row, Carousel } from 'antd'
 import GridTresImagenes from '../GridTresImagenes'
 import DescripcionDetalladaSession from './DescripcionDetalladaSesion'
 import parse from 'html-react-parser'
 import { path_images } from '../../../consts'
+import GaleriaImagenes from '../Galeria_imagenes'
 
 import '../../../index.css'
+
+function numeroPacks (data) {
+    const cantidadPacks = data.length
+    if (cantidadPacks === 2) {
+        return 12
+    }
+    return 8
+}
 
 export default function BasicTemplate({data}) {
     const titulo = data.titulo
     const imagenPortada = data.imagenes.portada
     const gridTriple1 = data.imagenes.grid_triple1
-    const gridTriple2 = data.imagenes.grid_triple2
-    const gridTriple3 = data.imagenes.grid_triple3
     const descripcionSesionDetallada = data.descripcioneDetallada
     const textoInicial = data.textos.inicial
     const dataPrecios = data.dataPrecios
     const { Panel } = Collapse
     const dataCollapse = data.dataCollapse
     const descripcionSesionDesktop = data.descripcionSesionDesktop
-    console.log(Object.values(imagenPortada)[0])
 
     const Mobile = ({ children }) => {
         const isMobile = useMediaQuery({ maxWidth: 767 })
@@ -44,18 +50,21 @@ export default function BasicTemplate({data}) {
                 </div>
                 <GridTresImagenes gridTriple={gridTriple1} />
                 {descripcionSesionDetallada ? <DescripcionDetalladaSession data={descripcionSesionDetallada} isMobile={true}/> : null}
-                {/* <GridPrecios data={dataPrecios} isMobile={true} /> */}
                 <div style={{marginTop: '50px'}}>
                     {Object.values(dataPrecios).map((val) =>
                         <Card
-                            title={val.titulo_opcion}
                             bordered={true}
                             style={{
                                 width: 'auto-fit',
                                 textAlign: 'center',
-                                marginTop: '50px'
+                                marginTop: '50px',
+                                whiteSpace: 'pre-line'
+                            }}
+                            headStyle={{
+                                whiteSpace: 'pre-line'
                             }}
                         >
+                            {<h3>{val.titulo_opcion}</h3>}
                             {val.descripcion.map((desc) =>
                                 <p>{desc}</p>
                             )}
@@ -64,7 +73,8 @@ export default function BasicTemplate({data}) {
                 </div>
                 {data.plaquita ? 
                     <div style={{ marginTop: '30px'}}>
-                        <h2 style={{ textAlign: 'center' }}>¿Quieres una plaquita personalizada con su nombre?</h2>
+                        <h2 style={{ textAlign: 'center' }}>{data.plaquita.titulo}</h2>
+                        <p style={{ textAlign: 'center' }}>{data.plaquita.descripcion}</p>
                         <Row
                         gutter={{
                             xs: 8,
@@ -73,18 +83,15 @@ export default function BasicTemplate({data}) {
                             lg: 32,
                         }}
                         >
-                            <Col className="gutter-row" span={12}>
-                                <Image className='imagen-responsive-center-roudend' style={{ width: '100%' }} src={path_images.replace('<image_id>', '46007b9a-2802-4646-b1b9-ea44e572f900')}/>
-                            </Col>
-                            <Col className="gutter-row" span={12}>
-                                <Image className='imagen-responsive-center-roudend' style={{ width: '100%' }} src={path_images.replace('<image_id>', '46007b9a-2802-4646-b1b9-ea44e572f900')}/>
-                            </Col>
+                           {data.plaquita.imagenes.map((imagen) => 
+                                <Col className='gutter-row' span={12}>
+                                    <Image className='imagen-responsive-center-roudend' style={{ width: '100%' }} src={path_images.replace('<image_id>', imagen)}/>
+                                </Col>
+                            )}
                         </Row>
                     </div>
                 : null
                 }
-                <GridTresImagenes gridTriple={gridTriple2} />
-                <GridTresImagenes gridTriple={gridTriple3} />
                 <div style={{
                 marginTop: '30px',
                 textAlign: 'center',
@@ -99,6 +106,34 @@ export default function BasicTemplate({data}) {
                         ))}
                     </Collapse>
                 </div>
+                {data.carousel ?
+                <div style={{marginTop: '50px'}}>
+                    <Carousel autoplay dots={false} fade={true}>
+                        <div>
+                            <Image className='imagen-responsive-center-roudend' alt='marron' src={path_images.replace('<image_id>', 'f1d749b9-d3bc-466b-088c-bf122f481300')}/>
+                            <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '18px' }}>Fondo marron</div>
+                        </div>
+                        <div>
+                            <Image className='imagen-responsive-center-roudend' alt='gris' src={path_images.replace('<image_id>', 'dcdc6919-a006-44a8-a7b3-464a6d7f3900')}/>
+                            <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '18px' }}>Fondo gris</div>
+                        </div>
+                        <div>
+                            <Image className='imagen-responsive-center-roudend' alt='negro' src={path_images.replace('<image_id>', '75e41a73-71cd-403f-64e4-addb1c43e900')}/>
+                            <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '18px' }}>Fondo negro</div>
+                        </div>
+                        <div>
+                            <Image className='imagen-responsive-center-roudend' alt='blanco' src={path_images.replace('<image_id>', 'dab818ae-299e-4702-c2c0-051ac374b400')}/>
+                            <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '18px' }}>Fondo blanco</div>
+                        </div>
+                    </Carousel>
+                </div>
+                : null}
+                { data.galeria_imagenes ?
+                <div>
+                    <h2 style={{ textAlign: 'center', marginTop: '50px' }}>Galería {titulo}</h2>
+                    <GaleriaImagenes data={data.galeria_imagenes}/>
+                </div>
+                : null}
             </Mobile>
             <Default>
                 <h1 style={{ textAlign: 'center' }}>{titulo}</h1>
@@ -112,11 +147,10 @@ export default function BasicTemplate({data}) {
                 </div>
                 <GridTresImagenes gridTriple={gridTriple1}/>
                 {descripcionSesionDetallada ? <DescripcionDetalladaSession data={descripcionSesionDetallada} isMobile={false}/> : null}
-                {/* <GridPrecios data={dataPrecios} isMobile={false} /> */}
                 <div style={{ marginTop: '50px'}}>
                     <Row gutter={16}>
                         {Object.values(dataPrecios).map((val) => 
-                            <Col span={12}>
+                            <Col span={numeroPacks(dataPrecios)}>
                                 <Card
                                     title={val.titulo_opcion}
                                     bordered={false}
@@ -132,7 +166,8 @@ export default function BasicTemplate({data}) {
                 </div>
                 {data.plaquita ?
                     <div style={{ marginTop: '50px'}}>
-                        <h2 style={{ textAlign: 'center' }}>¿Quieres una plaquita personalizada con su nombre?</h2>
+                        <h2 style={{ textAlign: 'center' }}>{data.plaquita.titulo}</h2>
+                        <p style={{ textAlign: 'center' }}>{data.plaquita.descripcion}</p>
                         <Row
                         gutter={{
                             xs: 8,
@@ -142,24 +177,49 @@ export default function BasicTemplate({data}) {
                         }}
                         style={{ marginTop: '20px'}}
                         >
-                            <Col className="gutter-row" span={12}>
-                                <Image className='imagen-responsive-center-roudend' style={{ width: '100%' }} src={path_images.replace('<image_id>', '46007b9a-2802-4646-b1b9-ea44e572f900')}/>
-                            </Col>
-                            <Col className="gutter-row" span={12}>
-                                <Image className='imagen-responsive-center-roudend' style={{ width: '100%' }} src={path_images.replace('<image_id>', 'f5531c02-1466-44cf-534a-a71ac3320100')}/>
-                            </Col>
+                            {data.plaquita.imagenes.map((imagen) => 
+                                <Col className='gutter-row' span={12}>
+                                    <Image className='imagen-responsive-center-roudend' style={{ width: '100%' }} src={path_images.replace('<image_id>', imagen)}/>
+                                </Col>
+                            )}
                         </Row>
                     </div>
                 : null
                 }
-                <GridTresImagenes gridTriple={gridTriple2} />
-                <GridTresImagenes gridTriple={gridTriple3} />
                 <div style={{
                     marginTop: '50px',
                     textAlign: 'center'
                 }}>
                     {parse(descripcionSesionDesktop)}          
                 </div>
+                {data.carousel ?
+                <div style={{ marginTop: '50px', textAlign: 'center' }}>
+                    <Carousel autoplay dots={false} fade={true}>
+                        <div className='alinear-carousel'>
+                            <Image className='imagen-responsive-center-roudend' alt='marron' src={path_images.replace('<image_id>', 'f1d749b9-d3bc-466b-088c-bf122f481300')}/>
+                            <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '18px' }}>Fondo marron</div>
+                        </div>
+                        <div className='alinear-carousel'>
+                            <Image className='imagen-responsive-center-roudend' alt='gris' src={path_images.replace('<image_id>', 'dcdc6919-a006-44a8-a7b3-464a6d7f3900')}/>
+                            <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '18px' }}>Fondo gris</div>
+                        </div>
+                        <div className='alinear-carousel'>
+                            <Image className='imagen-responsive-center-roudend' alt='negro' src={path_images.replace('<image_id>', '75e41a73-71cd-403f-64e4-addb1c43e900')}/>
+                            <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '18px' }}>Fondo negro</div>
+                        </div>
+                        <div className='alinear-carousel'>
+                            <Image className='imagen-responsive-center-roudend' alt='blanco' src={path_images.replace('<image_id>', 'dab818ae-299e-4702-c2c0-051ac374b400')}/>
+                            <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '18px' }}>Fondo blanco</div>
+                        </div>
+                    </Carousel>
+                </div>
+                : null}
+                { data.galeria_imagenes ?
+                <div>
+                    <h2 style={{ textAlign: 'center', marginTop: '50px' }}>Galería {titulo}</h2>
+                    <GaleriaImagenes data={data.galeria_imagenes}/>
+                </div>
+                : null}
             </Default>
         </div>
     )

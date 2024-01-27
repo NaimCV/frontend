@@ -3,7 +3,7 @@ import BasicTemplate from "../../componentes/Templates/Sesiones/BasicTemplate"
 export default function CakeSmash() {
     const imagenes = {
         portada: {edel_38: 'https://oliveda-photography.es/wp-content/uploads/2023/01/EDEL-38-1-edited-scaled.jpg'},
-        grid_triple: {
+        grid_triple1: {
             marc_02: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-02-4-edited-scaled.jpg',
             marc_43: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-43-edited-scaled.jpg',
             marc_46: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-46-edited-scaled.jpg'
@@ -91,38 +91,6 @@ export default function CakeSmash() {
             ]
         }
     ]
-    const imagenesGridQuatro = {
-        primer_grid: {
-            imagen_grande: {
-                sofia_53: 'https://oliveda-photography.es/wp-content/uploads/2023/01/SOFIA-53-2-scaled.jpg'
-            },
-            imagenes_triple: {
-                sofia_41: 'https://oliveda-photography.es/wp-content/uploads/2023/01/SOFIA-41-1536x1024.jpg',
-                sofia_35: 'https://oliveda-photography.es/wp-content/uploads/2023/01/SOFIA-35-1536x1024.jpg',
-                sofia_59: 'https://oliveda-photography.es/wp-content/uploads/2023/01/SOFIA-59-1536x1024.jpg'
-            }
-        },
-        segundo_grid: {
-            imagen_grande: {
-                saul_adonay_15: 'https://oliveda-photography.es/wp-content/uploads/2023/01/SAUL.ADONAY-15-scaled.jpg'
-            },
-            imagenes_triple: {
-                saul_adonay_24: 'https://oliveda-photography.es/wp-content/uploads/2023/01/SAUL.ADONAY-24-1536x1024.jpg',
-                saul_adonay_11: 'https://oliveda-photography.es/wp-content/uploads/2023/01/SAUL.ADONAY-11-1536x1024.jpg',
-                saul_adonay_19: 'https://oliveda-photography.es/wp-content/uploads/2023/01/SAUL.ADONAY-19-1536x1024.jpg'
-            }
-        },
-        tercer_grid: {
-            imagen_grande: {
-                biel_12: 'https://oliveda-photography.es/wp-content/uploads/2023/01/BIEL-1222-scaled.jpg'
-            },
-            imagenes_triple: {
-                biel_03: 'https://oliveda-photography.es/wp-content/uploads/2023/01/BIEL-03-1-1536x1024.jpg',
-                biel_19: 'https://oliveda-photography.es/wp-content/uploads/2023/01/BIEL-19-1-1536x1024.jpg',
-                biel_09: 'https://oliveda-photography.es/wp-content/uploads/2023/01/BIEL-09-1536x1024.jpg'
-            }
-        }
-    }
     const dataCollapse = [
         {'¿Cuándo se realizan estas sesiones?': 'Esta sesión se realiza desde el primer mes de vida, hasta los 12 meses. Cualquier mes es bueno para guardar un buen recuerdo de esta etapa.'},
         {'¿Complementos y vestuario?': 'Yo dispongo de una gran variedad de ropa y accesorios para ellos. No obstante, si tenéis alguna prenda o accesorio que os gustaría traer, solo me lo tenéis que decir para preparar un escenario acorde.'},
@@ -135,7 +103,6 @@ export default function CakeSmash() {
         textos,
         descripcioneDetallada,
         dataPrecios,
-        imagenesGridQuatro,
         dataCollapse,
         descripcionSesionDesktop
     }
