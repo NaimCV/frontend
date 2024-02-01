@@ -17,6 +17,7 @@ import Header from './componentes/Header/Header'
 import Productos from './pages/Productos'
 import CondicionesVenta from './pages/CondicionesVenta'
 import TerminosCondiciones from './pages/TerminosCondiciones'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -42,6 +43,7 @@ root.render(
           <Route path='/terminos-condiciones' element={<TerminosCondiciones />} />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
+        <SpeedInsights/>
       </div>
       <Footer />
     </BrowserRouter>
