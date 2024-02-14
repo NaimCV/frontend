@@ -20,6 +20,7 @@ export default function BasicTemplate({data}) {
     const titulo = data.titulo
     const imagenPortada = data.imagenes.portada
     const gridTriple1 = data.imagenes.grid_triple1
+    const gridTriple2 = data.imagenes.grid_triple2
     const descripcionSesionDetallada = data.descripcioneDetallada
     const textoInicial = data.textos.inicial
     const dataPrecios = data.dataPrecios
@@ -128,6 +129,16 @@ export default function BasicTemplate({data}) {
                     </Carousel>
                 </div>
                 : null}
+                {data.tematica ?
+                <div style={{
+                    marginTop: '50px',
+                    textAlign: 'center'
+                }}>
+                    <h2>Seguimiento con temática</h2>
+                    <p><b>¡Novedad!</b> Os doy la opción de personalizar uno de los escenarios con algún atrezzo con temática.</p>
+                    <GridTresImagenes gridTriple={gridTriple2} />
+                </div>
+                : null}
                 { data.galeria_imagenes ?
                 <div>
                     <h2 style={{ textAlign: 'center', marginTop: '50px' }}>Galería {titulo}</h2>
@@ -212,6 +223,16 @@ export default function BasicTemplate({data}) {
                             <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '18px' }}>Fondo blanco</div>
                         </div>
                     </Carousel>
+                </div>
+                : null}
+                {data.tematica ?
+                <div style={{
+                    marginTop: '50px',
+                    textAlign: 'center'
+                }}>
+                    <h2>Seguimiento con temática</h2>
+                    <p><b>¡Novedad!</b> Os doy la opción de personalizar uno de los escenarios con algún atrezzo con temática.</p>
+                    <GridTresImagenes gridTriple={gridTriple2} />
                 </div>
                 : null}
                 { data.galeria_imagenes ?
