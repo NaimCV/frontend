@@ -2,66 +2,11 @@ import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { ContactsOutlined, HomeOutlined, CameraOutlined } from '@ant-design/icons'
 import { Menu } from 'antd'
-import styled from 'styled-components';
-import Hamburger from './Hamburguer';
 import logo from '../../images/logo.png'
-
-const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  color: #fff;
-  padding: 1rem;
-`;
-
-const NavItem = styled.li`
-  list-style: none;
-  margin: 0 1rem;
-
-  a {
-    color: #000000;
-    text-decoration: none;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: #F684FF;
-    }
-  }
-`;
-
-const MobileNavToggle = styled.button`
-  display: block;
-  background-color: transparent;
-  border: none;
-  color: #000000;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    color: #F684FF;
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
-
-const MobileNav = styled.ul`
-  display: none;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-
-  @media (max-width: 767px) {
-    display: flex;
-  }
-`;
+import MenuMobile from '../MenuMobile';
 
 
 export default function Header() {
-  const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
   const items = [
     {
       label: (
@@ -167,18 +112,7 @@ export default function Header() {
       </div>
     </Default>
     <Mobile>
-      <Nav>
-        <div><a href="/"><img alt="logo" src={logo} style={{ maxWidth: "33%" }}/></a></div>
-          <MobileNavToggle onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
-          {isMobileNavOpen ? <Hamburger/> : <Hamburger/>}
-        </MobileNavToggle>
-        <MobileNav style={{ display: isMobileNavOpen ? 'flex' : 'none' }}>
-          <NavItem><a href="/">Inicio</a></NavItem>
-          <NavItem><a href="/sobre-mi">Sobre Mí</a></NavItem>
-          <NavItem><a href='/sesiones'>Sesiones</a></NavItem>
-          <NavItem><a href="/contacto">Contacto</a></NavItem>
-        </MobileNav>
-      </Nav>
+      <MenuMobile/>
     </Mobile>
     </>
   )
