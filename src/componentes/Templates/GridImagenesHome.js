@@ -7,7 +7,7 @@ export default function GridDosImagenes({data}) {
     return(
         <div style={{ marginTop: '50px' }}>
             <div>
-                <Divider orientation='center'><h2>Sesiones de {data.titulo}</h2></Divider>
+                <Divider orientation='center'><h2>{data.titulo}</h2></Divider>
                 <Row justify='space-around'>
                     {Object.keys(imagenes).map((key) => (
                         <Col span={7}>
