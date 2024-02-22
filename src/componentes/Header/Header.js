@@ -33,6 +33,14 @@ export default function Header() {
         {
           type: 'group',
           label: (
+            <a href="/sesiones/revelacion-sexo">
+              Revelación del sexo
+            </a>
+          )
+        },
+        {
+          type: 'group',
+          label: (
             <a href="/sesiones/maternidad">
               Maternidad
             </a>

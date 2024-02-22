@@ -7,6 +7,15 @@ import { path_images } from '../consts'
 export default function Home() {
     const imagenesSesiones = [
         {
+            titulo: "Revelación del sexo",
+            imagenes: {
+                cake_smash_infantiles_1: path_images.replace('<image_id>', '2f4bb4b4-edd5-4851-59d6-2b40e2797e00'),
+                cake_smash_infantiles_2: path_images.replace('<image_id>', '71ac770d-6465-4e74-3172-a8575d7e5800'),
+                cake_smash_infantiles_3: path_images.replace('<image_id>', '9094d7bc-3bf8-4b68-c7bb-75c66790d100'),
+            },
+            enlace: "/sesiones/revelacion-sexo"
+        },
+        {
             titulo: "Maternidad",
             imagenes: {
                 maternidad_1: path_images.replace('<image_id>', 'd3a6635d-3f99-4bdc-646d-bf3bb1926900'),
@@ -42,15 +51,6 @@ export default function Home() {
             },
             enlace: "/sesiones/cake-smash"
         },
-        //{
-            //titulo: "Cake Smash Infantiles",
-            //imagenes: {
-                //cake_smash_infantiles_1: path_images.replace('<image_id>', ''),
-                //cake_smash_infantiles_2: path_images.replace('<image_id>', ''),
-                //cake_smash_infantiles_3: path_images.replace('<image_id>', ''),
-            //},
-            //enlace: "/sesiones/cake-smash-infantiles"
-        //},
         //{
             //titulo: "Familiares",
             //imagenes: {

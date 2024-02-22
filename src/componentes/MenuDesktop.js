@@ -17,6 +17,9 @@ export default function MenuDesktop () {
                 </NavLink>
                 <NavLink to="/sesiones">
                     <Menu.SubMenu title="Sesiones">
+                        <NavLink to="/sesiones/revelacion-sexo">
+                            <Menu.Item>Revelación del sexo</Menu.Item>
+                        </NavLink>
                         <NavLink to="/sesiones/maternidad">
                             <Menu.Item>Maternidad</Menu.Item>
                         </NavLink>
