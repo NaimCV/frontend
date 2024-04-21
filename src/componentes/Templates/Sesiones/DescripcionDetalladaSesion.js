@@ -1,6 +1,7 @@
 import { Image } from 'antd'
 import DescripcionDetalladaSesionIzquierda from '../../sesiones/DescripcionDetalladaIzquierda'
 import DescripcionDetalladaSesionDerecha from '../../sesiones/DescripcionDetalladaDerecha'
+import { path_images } from '../../../consts'
 
 export default function DescripcionDetalladaSession({data, isMobile}) {
     const imagenes = data.imagenes
@@ -9,12 +10,20 @@ export default function DescripcionDetalladaSession({data, isMobile}) {
         return (
             <>
                 <h2 className='description-align'>¿En que consiste esta sesión?</h2>
-                <DescripcionDetalladaSesionIzquierda imagenes={imagenes.primera_seccion} textos={textos.primera_seccion} isMobile={true}/>
-                <DescripcionDetalladaSesionIzquierda imagenes={imagenes.segunda_seccion} textos={textos.segunda_seccion} isMobile={true}/>
-                <DescripcionDetalladaSesionIzquierda imagenes={imagenes.tercera_seccion} textos={textos.tercera_seccion} isMobile={true}/>
-                <DescripcionDetalladaSesionIzquierda imagenes={imagenes.cuarta_seccion} textos={textos.cuarta_seccion} isMobile={true}/>
-                <div className='center'>
-                    <Image alt="santiago_11" className='imagen-responsive-center-roudend' src="https://oliveda-photography.es/wp-content/uploads/2021/12/SANTIAGO-11-scaled.jpg"/>
+                <div style={{ marginTop: '50px' }}>
+                    <DescripcionDetalladaSesionIzquierda imagenes={imagenes.primera_seccion} textos={textos.primera_seccion} isMobile={true}/>
+                </div>
+                <div style={{ marginTop: '50px' }}>
+                    <DescripcionDetalladaSesionIzquierda imagenes={imagenes.segunda_seccion} textos={textos.segunda_seccion} isMobile={true}/>
+                </div>
+                <div style={{ marginTop: '50px' }}>
+                    <DescripcionDetalladaSesionIzquierda imagenes={imagenes.tercera_seccion} textos={textos.tercera_seccion} isMobile={true}/>
+                </div>
+                <div style={{ marginTop: '50px' }}>
+                    <DescripcionDetalladaSesionIzquierda imagenes={imagenes.cuarta_seccion} textos={textos.cuarta_seccion} isMobile={true}/>
+                </div>
+                <div className='center' style={{ marginTop: '50px' }}>
+                    <Image alt="smashCake18" className='imagen-responsive-center-roudend' src={path_images.replace('<image_id>', "8be46906-a78d-4340-9799-da82bec58a00")}/>
                 </div>
             </>
         )
@@ -23,12 +32,20 @@ export default function DescripcionDetalladaSession({data, isMobile}) {
     return (
         <>
             <h2 className='description-align'>¿En que consiste esta sesión?</h2>
-            <DescripcionDetalladaSesionIzquierda imagenes={imagenes.primera_seccion} textos={textos.primera_seccion}/>
-            <DescripcionDetalladaSesionDerecha imagenes={imagenes.segunda_seccion} textos={textos.segunda_seccion}/>
-            <DescripcionDetalladaSesionIzquierda imagenes={imagenes.tercera_seccion} textos={textos.tercera_seccion}/>
-            <DescripcionDetalladaSesionDerecha imagenes={imagenes.cuarta_seccion} textos={textos.cuarta_seccion}/>
-            <div className='center'>
-                <Image alt="santiago_11" className='imagen-responsive-center-roudend' src="https://oliveda-photography.es/wp-content/uploads/2021/12/SANTIAGO-11-scaled.jpg"/>
+            <div style={{ marginTop: '50px' }}>
+                <DescripcionDetalladaSesionIzquierda imagenes={imagenes.primera_seccion} textos={textos.primera_seccion}/>
+            </div>
+            <div style={{ marginTop: '50px' }}>
+                <DescripcionDetalladaSesionDerecha imagenes={imagenes.segunda_seccion} textos={textos.segunda_seccion} style={{ marginTop: '50px' }}/>
+            </div>
+            <div style={{ marginTop: '50px' }}>
+                <DescripcionDetalladaSesionIzquierda imagenes={imagenes.tercera_seccion} textos={textos.tercera_seccion} style={{ marginTop: '50px' }}/>
+            </div>
+            <div style={{ marginTop: '50px' }}>
+                <DescripcionDetalladaSesionDerecha imagenes={imagenes.cuarta_seccion} textos={textos.cuarta_seccion} style={{ marginTop: '50px' }}/>
+            </div>
+            <div className='center' style={{ marginTop: '50px' }}>
+                <Image alt="smashCake18" className='imagen-responsive-center-roudend' src={path_images.replace('<image_id>', "8be46906-a78d-4340-9799-da82bec58a00")}/>
             </div>
         </>
     )
