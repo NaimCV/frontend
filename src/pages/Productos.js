@@ -10,9 +10,9 @@ export default function Productos() {
                 producto_48: "https://oliveda-photography.es/wp-content/uploads/2023/07/productes-48-2-edited-scaled.jpg"
             },
             descripciones: [
-                "ALBÙM 20X20 (6 HOJAS) + CAJA CRAFT CON FAGUIN 120€",
-                "ALBÙM 20X20 (6 HOJAS) + CAJA MARCO IMENTADA 135€",
-                "ALBÙM 20X20 (6 HOJAS) + CAJA MADERA IMENTADA 145€"
+                "ÁLBUM 20X20 (6 HOJAS) + CAJA CRAFT CON FAGUIN 120€",
+                "ÁLBUM 20X20 (6 HOJAS) + CAJA MARCO IMANTADA 135€",
+                "Acordeón 13x18 35 €"
             ]
         }
     ]
@@ -25,7 +25,7 @@ export default function Productos() {
             },
             descripciones: [
                 "MARCO COMBI 3 PIEZAS VERTICAL CIRCULAR 75€",
-                "MARCO COMBI 3 PIEZAS VERTICAL RECTANGULAR 45€",
+                "CAJA BABY + 8 COPIAS 15x20 45€",
                 "MARCO CIRCULAR O CUADRADO A DOBLE CARA DE MADERA (19X19 45€) (25X25 50€) (37X37 55€)"
             ]
         }

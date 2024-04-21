@@ -69,6 +69,14 @@ export default function Header() {
               Cake-Smash
             </a>
           )
+        },
+        {
+          type: 'group',
+          label: (
+            <a href="/sesiones/dos-tres">
+              Dos, Tres...
+            </a>
+          )
         }
       ],
     },

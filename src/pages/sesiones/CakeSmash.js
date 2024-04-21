@@ -2,14 +2,14 @@ import BasicTemplate from "../../componentes/Templates/Sesiones/BasicTemplate"
 
 export default function CakeSmash() {
     const imagenes = {
-        portada: {edel_38: 'https://oliveda-photography.es/wp-content/uploads/2023/01/EDEL-38-1-edited-scaled.jpg'},
+        portada: {smashCake1: '3a155d66-a981-48de-567b-ad454131ac00'},
         grid_triple1: {
-            marc_02: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-02-4-edited-scaled.jpg',
-            marc_43: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-43-edited-scaled.jpg',
-            marc_46: 'https://oliveda-photography.es/wp-content/uploads/2023/01/MARC-46-edited-scaled.jpg'
+            smashCake2: '40df0a7c-824b-4a69-c05d-92e5c7f5d500',
+            smashCake3: '29c0f855-50d4-4f26-b52c-aa59f57a1c00',
+            smashCake4: '2d048ab7-08c2-4964-c90d-74332b97c300'
         },
         imagen_grande: {
-            ona_34: 'https://oliveda-photography.es/wp-content/uploads/2023/01/ONA-34-scaled.jpg'
+            smashCake5: 'https://oliveda-photography.es/wp-content/uploads/2023/01/ONA-34-scaled.jpg'
         }
     }
     const textos = {
@@ -56,24 +56,24 @@ export default function CakeSmash() {
         },
         imagenes: {
             primera_seccion: {
-                neil_02: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-02-4-1024x683.jpg",
-                neil_14: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-14-1-1024x683.jpg",
-                neil_03: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-03-3-1024x683.jpg"
+                smashCake6: "fcd2e5bf-a760-485a-ffe8-d656acc99800",
+                smashCake7: "4af9ce08-5a9f-41a2-0961-2d3b893e4300",
+                smashCake8: "a68ed850-6854-4861-1809-aa9f076e7700"
             },
             segunda_seccion: {
-                neil_26: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-26-1-1024x683.jpg",
-                neil_20: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-20-1-1024x683.jpg",
-                neil_27: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-27-2-1024x683.jpg"
+                smashCake9: "733b022f-b7aa-4b8c-293f-ee2d81dd6f00",
+                smashCake10: "e8d8ea39-d917-4425-a03e-ac0eed3a2500",
+                smashCake11: "76665ef0-5fb3-48ea-2865-34f19d7f2000"
             },
             tercera_seccion: {
-                neil_35: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-35-1-1024x683.jpg",
-                neil_51: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-51-1024x683.jpg",
-                neil_42: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-42-1024x683.jpg"
+                smashCake12: "bda2a82c-d867-4d7c-4957-ed3f487a1300",
+                smashCake13: "f2a6c2d8-4c62-4c60-0412-c982ad9fd000",
+                smashCake14: "33241f78-9344-4cc1-503f-2b48357bef00"
             },
             cuarta_seccion: {
-                neil_60: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-60-1024x683.jpg",
-                neil_75: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-75-1024x683.jpg",
-                neil_69: "https://oliveda-photography.es/wp-content/uploads/2023/01/NEIL-69-1-1024x683.jpg"
+                smashCake15: "ede40450-ddf9-44fa-8453-82ce42524500",
+                smashCake16: "7e123476-d099-47ac-5a9e-7134aa9ebf00",
+                smashCake17: "6663af1a-7928-4e88-c87e-0d39ecf13200"
             }
         }
     }
@@ -92,11 +92,11 @@ export default function CakeSmash() {
         }
     ]
     const dataCollapse = [
-        {'¿Cuándo se realizan estas sesiones?': 'Esta sesión se realiza desde el primer mes de vida, hasta los 12 meses. Cualquier mes es bueno para guardar un buen recuerdo de esta etapa.'},
-        {'¿Complementos y vestuario?': 'Yo dispongo de una gran variedad de ropa y accesorios para ellos. No obstante, si tenéis alguna prenda o accesorio que os gustaría traer, solo me lo tenéis que decir para preparar un escenario acorde.'},
-        {'¿Forma de pago?': 'Hay que hacer una paga y señal de 50 € para la reserva de la sesión, la misma se devolverá en caso de no poder asistir por motivos justificables o avisando 24 h antes de la sesión. El resto se pagara en EFECTIVO el mismo día de la sesión. La paga y señal hay que realizarla una vez os hayáis puesto en contacto conmigo y hayamos reservado día y hora. Datos para el Bizum paga y señal: 640019860 ¡MUY IMPORTANTE! Concepto nombre del bebe + seguimiento EJEMPLO: Paula seguimiento'},
+        {'¿Cuándo se realizan estas sesiones?': 'Esta sesión la realizo tres semanas antes del cumpleaños, para que tengáis las fotografías con tiempo. No obstante, la podéis realizar el mismo día o después.'},
+        {'¿Complementos y vestuario?': 'Dispongo de una gran variedad de ropa y accesorios para ellos, así que no os tenéis que preocupar de nada. Si tenéis alguna prenda o accesorio que os gustaría traer, solo me lo tenéis que decir para preparar un escenario acorde.'},
+        {'¿Forma de pago?': 'Hay que hacer una paga y señal de 50 € para la reserva de la sesión, la misma se devolverá en caso de no poder asistir por motivos justificables o avisando 24 h antes de la sesión. El resto se pagará en EFECTIVO el mismo día de la sesión. La paga y señal hay que realizarla una vez os hayáis puesto en contacto conmigo y hayamos reservado día y hora. Datos para el Bizum paga y señal: 640019860 ¡MUY IMPORTANTE! Concepto nombre del bebe + smash cake EJEMPLO: Paula smash cake'},
     ]
-    const descripcionSesionDesktop = "<h2>¿Cuándo se realizan estas sesiones?</h2><p>Esta sesión se realiza desde el primer mes de vida, hasta los 12 meses. Cualquier mes es bueno para guardar un buen recuerdo de esta etapa.</p><h2>¿Complementos y vestuario?</h2><p>Yo dispongo de una gran variedad de ropa y accesorios para ellos. No obstante, si tenéis alguna prenda o accesorio que os gustaría traer, solo me lo tenéis que decir para preparar un escenario acorde.</p><h2>¿Forma de pago?</h2><p>Hay que hacer una paga y señal de <strong>50 €</strong> para la reserva de la sesión, la misma se devolverá en caso de no poder asistir por motivos justificables o avisando 24 h antes de la sesión. El</p><p>resto se pagara en <strong>EFECTIVO</strong> el mismo día de la sesión.</p><p>La paga y señal hay que realizarla una vez os hayáis puesto en contacto conmigo y hayamos reservado día y hora.</p><p>Datos para el Bizum paga y señal: <strong>640019860</strong></p><p><strong>¡MUY IMPORTANTE!</strong> Concepto nombre del bebe + seguimiento EJEMPLO: Paula seguimiento</p>"
+    const descripcionSesionDesktop = "<h2>¿Cuándo se realizan estas sesiones?</h2><p>Esta sesión la realizo tres semanas antes del cumpleaños, para que tengáis las fotografías con tiempo. No obstante, la podéis realizar el mismo día o después.</p><h2>¿Complementos y vestuario?</h2><p>Dispongo de una gran variedad de ropa y accesorios para ellos, así que no os tenéis que preocupar de nada. Si tenéis alguna prenda o accesorio que os gustaría traer, solo me lo tenéis que decir para preparar un escenario acorde.</p><h2>¿Forma de pago?</h2><p>Hay que hacer una paga y señal de <strong>50 €</strong> para la reserva de la sesión, la misma se devolverá en caso de no poder asistir por motivos justificables o avisando 24 h antes de la sesión.</p><p>El resto se pagará en <strong>EFECTIVO</strong> el mismo día de la sesión.</p><p>La paga y señal hay que realizarla una vez os hayáis puesto en contacto conmigo y hayamos reservado día y hora.</p><p>Datos para el Bizum paga y señal: <strong>640019860</strong></p><p><strong>¡MUY IMPORTANTE!</strong> Concepto nombre del bebe + seguimiento EJEMPLO: Paula smash cake</p>"
     const data = {
         titulo: 'Cake Smash',
         imagenes,

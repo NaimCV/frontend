@@ -20,6 +20,7 @@ import TerminosCondiciones from './pages/TerminosCondiciones'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import { Analytics } from '@vercel/analytics/react'
 import RevelacioSexo from './pages/sesiones/RevelacioSexo'
+import DosTres from './pages/sesiones/DosTres'
 
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -41,6 +42,7 @@ root.render(
           {/* <Route path='/sesiones/cake-smash-infantil' element={<CakeSmashInfantil />} /> */}
           <Route path='/sesiones/hoy-me-toca-a-mi' element={<HoyMeTocaAmi />} />
           <Route path='/sesiones/newborn' element={<Newborn />} />
+          <Route path='/sesiones/dos-tres' element={<DosTres />} />
           <Route path='/productos' element={<Productos />} />
           <Route path='/condiciones-venta' element={<CondicionesVenta />} />
           <Route path='/terminos-condiciones' element={<TerminosCondiciones />} />
