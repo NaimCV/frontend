@@ -51,6 +51,15 @@ export default function Home() {
             },
             enlace: "/sesiones/cake-smash"
         },
+        {
+            titulo: "Dos, Tres...",
+            imagenes: {
+                dos_tres_1: path_images.replace('<image_id>', '42a68224-b650-4ea5-2348-c00880ddd100'),
+                dos_tres_2: path_images.replace('<image_id>', 'af6c8b4e-d5ee-4b69-7e40-5ef709cc3900'),
+                dos_tres_3: path_images.replace('<image_id>', 'e3de1b77-5628-405a-1618-d02f4e2c3e00'),
+            },
+            enlace: "/sesiones/dos-tres"
+        },
         //{
             //titulo: "Familiares",
             //imagenes: {
