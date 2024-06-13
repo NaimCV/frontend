@@ -37,6 +37,7 @@ function MenuMobile() {
             <li><a href="/sobre-mi">Sobre Mí</a></li>
             <li><a href='/sesiones'>Sesiones</a></li>
             <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/productos">Productos</a></li>
             </ul>
         </nav>
         </div>
