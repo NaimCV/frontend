@@ -37,19 +37,19 @@ export default function Maternidad() {
     const descripcioneDetallada = false
     const dataPrecios = [
         {
-            titulo_opcion: ['SESIÓN DE MATERNIDAD 110 €'],
+            titulo_opcion: ['SESIÓN DE MATERNIDAD 120 €'],
             descripcion: [
                 '8 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
                 '1 fondo a escoger entre blanco, negro, marrón o gris.',
                 '1 cambio de ropa (un total de dos vestuarios)',
                 'Fotografías individuales y familiares',
                 'Las mismas impresas 15x20 en papel cotton',
-                'Con opción a compra de galería completa'
+                'Con opción a compra de galería completa por 55€ (40 - 50 fotografías)'
             ]
         },
         {
             titulo_opcion: [
-                'PACK LAVANDA 200 €'
+                'PACK LAVANDA 210 €'
             ],
             descripcion: [
                 '12 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
@@ -58,7 +58,7 @@ export default function Maternidad() {
                 'fotografías individuales y familiares',
                 'Caja de madera personalizada',
                 'Las mismas impresas 15x20 en papel cotton',
-                'Con opción a compra de galería completa'
+                'Con opción a compra de galería completa por 55€ (40 - 50 fotografías)'
             ]
         }
     ]
