@@ -44,7 +44,7 @@ export default function Maternidad() {
                 '1 cambio de ropa (un total de dos vestuarios)',
                 'Fotografías individuales y familiares',
                 'Las mismas impresas 15x20 en papel cotton',
-                'Con opción a compra de galería completa por 55€ (40 - 50 fotografías)'
+                'Con opción a compra de galería completa por 55€ (40 - 50 fotografías).'
             ]
         },
         {
@@ -58,7 +58,7 @@ export default function Maternidad() {
                 'fotografías individuales y familiares',
                 'Caja de madera personalizada',
                 'Las mismas impresas 15x20 en papel cotton',
-                'Con opción a compra de galería completa por 55€ (40 - 50 fotografías)'
+                'Con opción a compra de galería completa por 55€ (40 - 50 fotografías).'
             ]
         }
     ]
