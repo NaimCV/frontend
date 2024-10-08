@@ -20,9 +20,10 @@ export default function DosTres() {
     const descripcioneDetallada = null
     const dataPrecios = [
         {
-            titulo_opcion: ['Precio de la sesión: 135 €'],
+            titulo_opcion: ['Precio de la sesión: 150 €'],
             descripcion: [
                 '10 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
+                'Las mismas impresas 15x20',
                 'Sesión en estudio de 30 min aprox. Siempre voy al ritmo de cada peque.',
                 'Pastel básico o donuts incluido.',
                 'Topper personalizado con el nombre.',
