@@ -26,7 +26,7 @@ export default function Seguimiento() {
     const descripcioneDetallada = null
     const dataPrecios = [
         {
-            titulo_opcion: ['SEGUIMIENTO 120 €'],
+            titulo_opcion: ['SEGUIMIENTO 130 €'],
             descripcion: [
                 'Sesión en estudio de 30/40 min aprox.',
                 '10 fotografías vía descarga',
