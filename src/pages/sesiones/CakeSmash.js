@@ -86,7 +86,7 @@ export default function CakeSmash() {
                 'Sesión en estudio de 1 hora aprox. Siempre voy al ritmo de cada peque.',
                 'Pastel básico o donuts incluido.',
                 'Topper personalizado con el nombre.',
-                'Todo el vestuario del peque. Dispongo de una gran variedad de atrezo para que no os tengáis que preocupar por nada. (incluyendo coronas, cubre pañales, peleles y topper…)',
+                'Todo el vestuario del peque. Dispongo de una gran variedad de atrezo para que no os tengáis que preocupar por nada. (incluyendo coronas, cubre pañales, peleles, etc...)',
                 '1 fondo ( personalizado con los colores o temática que más os gusten )',
                 'Fotografías familiares.',
                 'Baño espumoso y calentito.',
