@@ -1,135 +1,64 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { ContactsOutlined, HomeOutlined, CameraOutlined } from '@ant-design/icons'
-import { Menu } from 'antd'
 import logo from '../../images/logo.png'
 import MenuMobile from '../MenuMobile';
-
+import DynamicMenu from './DynamicMenu';
+import './Header.css';
 
 export default function Header() {
-  const items = [
-    {
-      label: (
-        <a href="/">
-          Inicio
-        </a>
-      ),
-      key: 'inicio',
-      icon: <HomeOutlined />,
-    },
-    {
-      label: (
-        <a href="/sobre-mi">
-          Sobre mí
-        </a>
-      ),
-      key: 'sobre-mi'
-    },
-    {
-      label: 'Sesiones',
-      key: 'sesiones',
-      icon: <CameraOutlined />,
-      children: [
-        {
-          type: 'group',
-          label: (
-            <a href="/sesiones/revelacion-sexo">
-              Revelación del sexo
-            </a>
-          )
-        },
-        {
-          type: 'group',
-          label: (
-            <a href="/sesiones/maternidad">
-              Maternidad
-            </a>
-          )
-        },
-        {
-          type: 'group',
-          label: (
-            <a href="/sesiones/newborn">
-              Newborn
-            </a>
-          )
-        },
-        {
-          type: 'group',
-          label: (
-            <a href="/sesiones/seguimiento">
-              Seguimiento
-            </a>
-          )
-        },
-        {
-          type: 'group',
-          label: (
-            <a href="/sesiones/cake-smash">
-              Cake-Smash
-            </a>
-          )
-        },
-        {
-          type: 'group',
-          label: (
-            <a href="/sesiones/dos-tres">
-              Dos, Tres...
-            </a>
-          )
-        }
-      ],
-    },
-    {
-      label: (
-        <a href="/contacto">
-          Contacto
-        </a>
-      ),
-      key: 'contacto',
-      icon: <ContactsOutlined />,
-    },
-    {
-      label: (
-        <a href="/productos">
-          Productos
-        </a>
-      ),
-      key: 'productos',
-      icon: <ContactsOutlined />,
-    },
-  ]
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const Mobile = ({ children }) => {
     const isMobile = useMediaQuery({ maxWidth: 767 })
     return isMobile ? children : null
   }
+  
   const Default = ({ children }) => {
-  const isNotMobile = useMediaQuery({ minWidth: 768 })
+    const isNotMobile = useMediaQuery({ minWidth: 768 })
     return isNotMobile ? children : null
   }
+
   return (
     <>
-    <Default>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <div>
-          <a href="/">
-            <img
-              alt="logo"
-              src={logo}
-              style={{ maxWidth: "25%" }}
-            />
-          </a>
-        </div>
-        <div style={{ display: "flex", justifyContent: "flex-end", width: "100%" }}>
-          <div>
-            <Menu mode="horizontal" items={items} style={{ width: "100%", padding: "0 20px" }}/>
+      <Default>
+        <header className={`header-desktop ${scrolled ? 'scrolled' : ''}`}>
+          <div className="header-container">
+            <div className="logo-container">
+              <a href="/">
+                <img
+                  alt="Marta Oliveda Photography"
+                  src={logo}
+                  className="header-logo"
+                />
+              </a>
+            </div>
+            <nav className="nav-menu">
+              <DynamicMenu 
+                className="header-menu"
+                style={{ 
+                  background: 'transparent',
+                  border: 'none',
+                  fontSize: '16px',
+                  fontWeight: '500'
+                }}
+              />
+            </nav>
           </div>
-        </div>
-      </div>
-    </Default>
-    <Mobile>
-      <MenuMobile/>
-    </Mobile>
+        </header>
+      </Default>
+      <Mobile>
+        <MenuMobile />
+      </Mobile>
     </>
   )
 }
