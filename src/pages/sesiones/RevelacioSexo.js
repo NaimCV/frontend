@@ -46,25 +46,11 @@ export default function RevelacioSexo() {
         {
             titulo_opcion: ['REVELACIÓN DEL GÉNERO 90 €'],
             descripcion: [
-                '15 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
+                '8 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
                 '1 fondo blanco',
                 'Fotografías de antes de la relación y de después',
-                'Editadas profesionalmente + montaje IA',
                 'Pueden participar la unión familiar (Papas, mamas e hijos si hay)',
-                'Con opción a compra de galería completa por 55 € (40 - 50 fotografías)'
-            ]
-        },
-        {
-            titulo_opcion: [
-                'REVELACIÓN FAMILIAR 160 €'
-            ],
-            descripcion: [
-                '20 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
-                '1 fondo blanco',
-                'Fotografías de antes de la relación y de después',
-                'Editadas profesionalmente + montaje IA',
-                'Fotografías con toda la familia (abuel@s, ti@s, prim@s, amig@s...) Máximo de 20 personas.',
-                'Con opción a compra de galería completa por 55 € (40 - 50 fotografías)'
+                'Con opción a compra de galería completa por 70 € (40 - 50 fotografías)'
             ]
         }
     ]

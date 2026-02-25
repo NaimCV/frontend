@@ -20,16 +20,17 @@ export default function DosTres() {
     const descripcioneDetallada = null
     const dataPrecios = [
         {
-            titulo_opcion: ['Precio de la sesión: 150 €'],
+            titulo_opcion: ['Precio de la sesión: 160 €'],
             descripcion: [
-                '10 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
-                'Las mismas impresas 15x20',
-                'Sesión en estudio de 30 min aprox. Siempre voy al ritmo de cada peque.',
-                'Pastel básico o donuts incluido.',
+                '8 fotografías editadas y retocadas profesionalmente, en alta calidad y vía descarga.',
+                'Las mismas fotografías impresas en tamaño 15x20.',
+                'Sesión en estudio de aproximadamente 30 minutos, siempre al ritmo de cada peque.',
+                'Pastel básico o donuts incluidos.',
                 'Topper personalizado con el nombre.',
-                'No incluye el vestuario, pero sí la corona y complementos.',
-                '1 fondo (personalizado con los colores o temática que más os gusten)',
-                'Fotografías familiares'
+                'No incluye vestuario, pero sí corona y complementos.',
+                '1 fondo personalizado con los colores o la temática que más os gusten.',
+                'Fotografías familiares incluidas.',
+                'Con opción a compra de galería completa por 70 € (40 - 50 fotografías).'
             ]
         }
     ]
