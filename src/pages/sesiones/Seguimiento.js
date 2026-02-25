@@ -26,40 +26,54 @@ export default function Seguimiento() {
     const descripcioneDetallada = null
     const dataPrecios = [
         {
-            titulo_opcion: ['SEGUIMIENTO 130 €'],
+            titulo_opcion: ['SEGUIMIENTO 140 €'],
             descripcion: [
                 'Sesión en estudio de 30/40 min aprox.',
-                '10 fotografías vía descarga',
+                '8 fotografías vía descarga',
+                'Las mismas impresas 15x20.',
                 'Vestuario incluido',
-                '3 fondos (a escoger color)'
+                '2 fondos (a escoger color)',
+                'Con opción a compra de galería completa por 70 € (40 - 50 fotografías).'
             ]
         },
         {
             titulo_opcion: [
                 'PACK SEGUIMIENTO',
-                '(3, 6 y 9 meses) - 320 €'
+                '(3, 6 y 9 meses) - 390 €'
             ],
             descripcion: [
                 'Sesión en estudio de 30/40 min aprox.',
-                '10 fotografías vía descarga (cada sesión, un total de 30 fotografías)',
+                '8 fotografías vía descarga.',
+                'Las mismas impresas 15x20.',
                 'Vestuario incluido',
-                '3 fondos (a escoger color)'
+                '3 fondos (a escoger color)',
+                'Con opción a compra de galería completa por 70 € (40 - 50 fotografías).'
             ]
         },
         {
             titulo_opcion: [
                 'PACK SEGUIMIENTO + SMASH CAKE',
-                '4, 8 y 12 (la ultima smash cake) - 360 €'
+                '4, 8 y 12 meses - 440 €'
             ],
             descripcion: [
+                'Seguimiento 4 y 8 meses:',
                 'Sesión en estudio de 30/40 min aprox.',
-                '10 fotografías vía descarga (cada sesión de seguimiento +',
-                '15 fotografías en la sesión smash cake). Un total de 35',
-                'fotografías)',
-                'Vestuario incluido',
-                '3 fondos (a escoger color) para las sesiones de',
-                'seguimiento',
-                '1 fondo personalizado para el smash cake'
+                '8 fotografías vía descarga.',
+                'Las mismas impresas 15x20.',
+                'Vestuario incluido.',
+                '2 fondos (a escoger color).',
+                'Con opción a compra de galería completa por 70 € (40 - 50 fotografías).',
+                'Smash Cake:',
+                'Sesión en estudio de 30/40 min aprox. Siempre voy al ritmo de cada peque.',
+                '8 fotografías vía descarga.',
+                'Las mismas impresas 15x20.',
+                'Pastel básico o donuts incluido.',
+                'Topper personalizado con el nombre.',
+                'Todo el vestuario del peque. Dispongo de una gran variedad de atrezo para que no os tengáis que preocupar por nada. (incluyendo coronas, cubre pañales, peleles…)',
+                '1 fondo ( personalizado con los colores o temática que más os gusten).',
+                'Fotografías familiares.',
+                'Baño espumoso y calentito.',
+                'Con opción a compra de galería completa por 70 € (40 - 50 fotografías).'
             ]
         }
     ]

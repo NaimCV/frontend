@@ -53,17 +53,17 @@ export default function Newborn() {
     const descripcioneDetallada = false
     const dataPrecios = [
         {
-            titulo_opcion: ['NEWBORN por 190 €'],
+            titulo_opcion: ['NEWBORN por 200 €'],
             descripcion: [
                 '8 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
                 'Las mismas impresas 15x20',
                 'Sobre personalizado con el color y el nombre del o la bebe',
-                'Sesión en estudio de 1 - 3 horas.',
-                'Vestuario. Dispongo de una gran variedad de atrezzo para que no os tengáis que preocupar por nada. (Si tenéis alguna puesta u objeto que os gustaría traer, tenéis que avisarme con antelación para preparar el escenario adecuado)',
+                'Sesión en estudio de 1 - 3 horas respetando siempre el ritmo del bebe.',
+                'Vestuario y una amplia variedad de atrezo para que no tengáis que preocuparos por nada. (Si tenéis alguna prenda u objeto especial que os gustaría traer, avisadme con antelación para preparar el escenario adecuado).',
                 'Dos posicionadores (cunitas, sillones, cuencos, caballito...)',
                 '1 fondo en puff',
                 '1 fondo familiar con papás y hermanit@s',
-                'Con opción a compra de galería completa por 60 € (40-50 fotografías)'
+                'Con opción a compra de galería completa por 70 € (40-50 fotografías)'
             ]
         }
     ]

@@ -79,18 +79,18 @@ export default function CakeSmash() {
     }
     const dataPrecios = [
         {
-            titulo_opcion: ['Precio de la sesión: 180€'],
+            titulo_opcion: ['Precio de la sesión: 190 €'],
             descripcion: [
-                '12 fotografías vía descarga en alta calidad, editadas y retocadas profesionalmente.',
-                'Las mismas impresas 15x20 en papel cotton.',
-                'Sesión en estudio de 1 hora aprox. Siempre voy al ritmo de cada peque.',
+                'Sesión en estudio de 30/40 min aprox. Siempre voy al ritmo de cada peque.',
+                '8 fotografías vía descarga.',
+                'Las mismas impresas 15x20.',
                 'Pastel básico o donuts incluido.',
                 'Topper personalizado con el nombre.',
-                'Todo el vestuario del peque. Dispongo de una gran variedad de atrezo para que no os tengáis que preocupar por nada. (incluyendo coronas, cubre pañales, peleles y topper…)',
-                '1 fondo ( personalizado con los colores o temática que más os gusten )',
+                'Todo el vestuario del peque. Dispongo de una gran variedad de atrezo para que no os tengáis que preocupar por nada. (incluyendo coronas, cubre pañales, peleles…)',
+                '1 fondo ( personalizado con los colores o temática que más os gusten).',
                 'Fotografías familiares.',
                 'Baño espumoso y calentito.',
-                'Con opción a compra de la galería completa por 55 € (40-50 fotografías).'
+                'Con opción a compra de galería completa por 70 € (40 - 50 fotografías).'
             ]
         }
     ]

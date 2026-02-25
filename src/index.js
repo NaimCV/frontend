@@ -10,7 +10,6 @@ import Maternidad from './pages/sesiones/Maternidad'
 import Seguimiento from './pages/sesiones/Seguimiento'
 import CakeSmash from './pages/sesiones/CakeSmash'
 import Sesiones from './pages/sesiones/Sesiones'
-import HoyMeTocaAmi from './pages/sesiones/HoyMeTocaAmi'
 import Newborn from './pages/sesiones/Newborn'
 import Footer from './componentes/Footer/Footer'
 import Header from './componentes/Header/Header'
@@ -40,7 +39,6 @@ root.render(
           <Route path='/sesiones/seguimiento' element={<Seguimiento />} />
           <Route path='/sesiones/cake-smash' element={<CakeSmash />} />
           {/* <Route path='/sesiones/cake-smash-infantil' element={<CakeSmashInfantil />} /> */}
-          <Route path='/sesiones/hoy-me-toca-a-mi' element={<HoyMeTocaAmi />} />
           <Route path='/sesiones/newborn' element={<Newborn />} />
           <Route path='/sesiones/dos-tres' element={<DosTres />} />
           <Route path='/productos' element={<Productos />} />
