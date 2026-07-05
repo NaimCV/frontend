@@ -21,9 +21,9 @@ export default function FooterWeb () {
                     </div>
                     <div class="column">
                         <h2>Contáctanos</h2>
-                        <p>Calle Jacint Verdaguer 24, Castellbisbal, Barcelona</p>
+                        <p>Avinguda Astronomia 17, Rubí, Barcelona</p>
                         <p>Teléfono: 638 38 57 87</p>
-                        <p><MdOutlineMail/> info@oliveda-photography.com</p>
+                        <p><MdOutlineMail/> info@martaoliveda.com</p>
                     </div>
                     <div class="column">
                         <h2>Redes Sociales</h2>
